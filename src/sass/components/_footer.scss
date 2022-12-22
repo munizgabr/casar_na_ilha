@@ -1,0 +1,27 @@
+@import 'avariables';
+
+footer#footer{
+    background-color: lighten($gray, 20%);
+    padding-top: 20px;
+    .copyright{
+        background-color: $gray;
+        padding: 10px 0;
+        p{
+            color:#fff;
+        }
+    }
+}
+
+@media screen and (max-width: 1185px) {
+
+
+}
+
+@media screen and (max-width: 800px) {
+
+
+}
+
+@media screen and (max-width: 520px) {
+
+}

@@ -1,0 +1,44 @@
+@import "avariables";
+
+.btn {
+
+	border-radius: 30px;
+	display: inline-block;
+	padding: 15px 30px;
+	font-weight: 800;
+	text-align: center;
+
+	&:hover {
+
+		text-decoration: none;
+	}
+}
+
+.btn--orange {
+
+	background-color: #eb8129;
+	color: #fff;
+	box-shadow: 20px 17px 20px 0px rgba(235, 129, 41, 0);
+	font-size: 1.3em;
+
+	&:hover {
+
+		background-color: darken(#eb8129, 10%);
+		color: #fff;
+	}
+}
+
+.btn--big {
+
+	font-weight: bold;
+	font-size: 1.8em;
+	padding: 10px 30px;
+}
+
+@media screen and (max-width: 580px) {
+
+	.btn--big {
+
+		font-size: 1.2em;
+	}
+}

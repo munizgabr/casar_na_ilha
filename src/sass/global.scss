@@ -1,0 +1,21 @@
+@import "./components/avariables";
+@import "./components/amixins";
+@import "./components/reset";
+@import "./components/formularios";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/menu";
+@import "./components/grid";
+@import "./components/buttons";
+@import "./components/animate";
+@import "./components/modal";
+
+.wow {
+
+    visibility: hidden;
+}
+
+@media screen and (max-width: 1185px) {
+	
+
+}

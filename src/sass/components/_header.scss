@@ -1,0 +1,53 @@
+@import "../components/amixins";
+
+header.principal-header {
+
+	display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    position: fixed;
+    z-index: 44;
+	left: 0;
+
+	.wrapper-header {
+
+		padding-top: 20px;
+		padding-bottom: 20px;
+		vertical-align: top;
+		display: inline-block;
+		width: 100%;
+	}
+
+	.wrapper-logo {
+
+		width: 18%;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+
+}
+
+@media screen and (min-width: 1185px) {
+
+}
+
+@media screen and (max-width: 1185px) {
+
+	header.principal-header .wrapper-logo{
+		width: 200px;
+	}
+
+}
+
+@media screen and (max-width: 1085px) {
+
+}
+
+@media screen and (max-width: 970px) {
+
+}
+
+@media screen and (max-width: 680px) {
+
+}

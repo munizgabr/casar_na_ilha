@@ -1,0 +1,422 @@
+::-webkit-input-placeholder {
+   color: lighten(#7a7a7a, 25%);
+   font-family: $fonteRg;
+   font-size: 1em;
+   font-style: normal;
+}
+
+:-moz-placeholder {
+   color: lighten(#7a7a7a, 25%);
+   font-family: $fonteRg;
+   font-size: 1em;
+   font-style: normal;
+}
+
+::-moz-placeholder {
+   color: lighten(#7a7a7a, 25%);
+   font-family: $fonteRg;
+   font-size: 1em;
+   font-style: normal;
+}
+
+:-ms-input-placeholder {
+   color: lighten(#7a7a7a, 25%);
+   font-family: $fonteRg;
+   font-size: 1em;
+   font-style: normal;
+}
+
+fieldset {
+
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+legend {
+
+    border: 0; /* 1 */
+    padding: 0; /* 2 */
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+
+    -webkit-appearance: button;
+    cursor: pointer;
+
+}
+
+input[type="submit"] {
+
+    border: none;
+    color: #fff;
+    padding: 12px 35px;
+    font-size: 1.55em;
+    font-weight: bold;
+    background-color: $orange;
+    width: auto;
+    margin: 0 auto;
+    border-radius: 100px;
+
+    &:hover {
+
+        background-color: darken($orange, 5%);
+    }
+
+}
+
+.select-wrapper {
+
+    position: relative;
+    text-align: center;
+
+    &:after {
+
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        content: "";
+        border-top: 7px solid #838e8e;
+        right: 25px;
+        top: 31px;
+        position: absolute;
+        pointer-events: none;
+    }
+
+}
+
+button[disabled],
+html input[disabled] {
+
+    cursor: default;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type="search"] {
+
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+
+    -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+
+    border: 0;
+    padding: 0;
+}
+
+label {
+
+    color: $blue;
+    font-size: 1.2em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="password"],
+input[type="date"],
+select,
+textarea, .wpcf7-form-control-wrap.arquivo {
+
+    padding: 22px;
+    margin-bottom: 0;
+    width: 100%;
+    background-color: #f7f9f9;
+    border: 1px solid #ced3d3;
+    color: #595959;
+    font-family: $fonteRg;
+    font-size: 16px;
+    border-radius: 17px;
+
+
+     &:focus {
+
+        outline: 0;
+        background-color: #f2f2f2;
+        border: 1px solid #ced3d3;
+    }
+}
+.wpcf7-form-control-wrap.arquivo{width: 100%;}
+
+textarea {
+
+    height: 125px;
+    overflow: auto;
+    vertical-align: top;
+    -webkit-resize: none;
+    -moz-resize: none;
+    resize: none;
+    margin-bottom: 20px;
+}
+
+
+select {
+
+    font-size: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    @include removeselect();
+    height: 65px;
+    font-family: $fonteRg;
+    color: lighten(#7a7a7a, 15%);
+}
+
+div.wpcf7-response-output {
+
+    background-color: #FCF4D4;
+    font-size: 12px;
+    line-height: 13px;
+    margin-bottom: 0;
+    padding: 4px 10px;
+    width: 100%;
+    float: left;
+    margin: 0;
+    top: 20px;
+    position: relative;
+}
+
+
+.wpcf7-form-control-wrap {
+
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+span.wpcf7-not-valid-tip {
+
+    position: absolute;
+    right: 0;
+    top: -19px;
+    font-size: 0.9em;
+}
+
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing {
+
+    margin: 0;
+    text-align: center;
+    top: 20px;
+    position: relative;
+}
+
+.col6 {
+
+    width: 50%;
+    display: inline-block;
+    margin-right: 0;
+    float: left;
+    margin-bottom: 10px;
+
+    &:nth-of-type(1),
+    &:nth-of-type(3),
+    &:nth-of-type(5),
+    &:nth-of-type(7) {
+
+        padding-right: 15px;
+    }
+
+    &:nth-of-type(2),
+    &:nth-of-type(4),
+    &:nth-of-type(6),
+    &:nth-of-type(8) {
+
+        padding-left: 15px;
+    }
+
+}
+
+.col12 {
+
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+}
+
+@include placeholder {
+
+    color: #919b9b;
+    font-size: 16px;
+    font-family: $fonteRg;
+
+}
+.wpcf7 {
+
+    form {
+
+        .wpcf7-response-output {
+
+            margin: 0;
+        }
+    }
+}
+
+div.wpcf7-response-output {
+
+    text-align: center;
+}
+
+.wrapper-form {
+
+    display: block;
+    width: 850px;
+    margin: 0 auto;
+}
+
+.search-top {
+
+    display: inline-block;
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    .title {
+
+        display: inline-block;
+        font-size: 2.5em;
+        text-transform: uppercase;
+        font-weight: bold;
+        vertical-align: middle;
+        margin-right: 20px;
+        line-height: 40px;
+    }
+
+    #searchform {
+
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .wrapper {
+
+        margin: 0 auto;
+        width: 800px;
+        text-align: center;
+    }
+
+    input[type="text"] {
+
+        @include inputText();
+    }
+
+    input[type="submit"] {
+
+        &:hover {
+
+            opacity: 0.85;
+        }
+    }
+}
+
+@media screen and (max-width: 1185px) {
+
+    .search-top {
+
+        padding-top: 30px;
+        padding-bottom: 10px;
+
+        .wrapper {
+
+            width: 100%;
+
+            .title {
+
+                font-size: 1.6em;
+                margin-bottom: 20px;
+                line-height: 30px;
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+    }
+
+    .formulario {
+
+        padding-right: 30px;
+        padding-left: 30px;
+
+        .center {
+
+            &:after {
+
+                right: -80px;
+                top: -180px;
+                transform: scale(0.4);
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+
+    .wrapper-form {
+
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="password"],
+    input[type="date"],
+    select,
+    textarea {
+
+        padding: 15px;
+    }
+
+    .formulario {
+
+        margin-top: 70px;
+
+    }
+
+    .col6 {
+
+        width: 100%;
+
+        &:nth-of-type(1), &:nth-of-type(3) {
+
+            padding-right: 0;
+        }
+
+        &:nth-of-type(2), &:nth-of-type(4) {
+
+            padding-left: 0;
+        }
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+
+    input[type="submit"] {
+
+        font-size: 1em;
+    }
+}
