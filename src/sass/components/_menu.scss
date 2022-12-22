@@ -92,7 +92,7 @@
 
 				a {
 
-					color: $yellow;
+					color: black;
 
 					&:after {
 
@@ -103,16 +103,26 @@
 
 			a {
 
-				color: $yellow;
+				color: black;
 				text-transform: uppercase;
 				font-weight: bold;
-				font-size: 1.25em;
+				font-size: 1em;
 				padding-bottom: 10px;
 				position: relative;
+				&:before {
+					content: url(../../src/images/menu-bullet.png);
+					opacity: 0;
+					vertical-align: middle;
+					margin-left: 5px;
+				}
 
 				&:hover {
 
 					text-decoration: none;
+					color: #42F9FF;
+					&:before {
+						opacity: 1;
+					}
 				}
 
 			}
@@ -265,11 +275,11 @@
 						li {
 
 							white-space: initial;
-							background-color: darken($yellow, 5%);
+							background-color: darken(black, 5%);
 
 							&:hover {
 
-								background-color: darken($yellow, 8%);
+								background-color: darken(black, 8%);
 							}
 
 							a {
@@ -495,12 +505,12 @@
 
 				a {
 
-					color: $yellow;
+					color: black;
 				}
 
 				&:hover {
 
-					background-color: darken($yellow, 10%);
+					background-color: darken(black, 10%);
 
 					.sub-menu {
 
@@ -756,7 +766,7 @@
 			    		a {
 
 			    			font-size: 13px;
-			    			color: $yellow;
+			    			color: black;
 
 			    			&:focus {
 

@@ -972,6 +972,18 @@ select {
   outline: none;
 }
 
+.h1-hide {
+  text-indent: -99999px;
+  width: 0;
+  height: 0;
+  float: left;
+}
+
+.center {
+  width: 1250px;
+  margin: 0 auto;
+}
+
 header.principal-header {
   display: inline-block;
   width: 100%;
@@ -980,19 +992,23 @@ header.principal-header {
   z-index: 44;
   left: 0;
 }
-header.principal-header .wrapper-header {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-}
 header.principal-header .wrapper-logo {
-  width: 18%;
-  display: inline-block;
-  vertical-align: top;
+  width: 185px;
+}
+header.principal-header .center-header {
+  background-color: white;
+}
+header.principal-header .wrapper-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+@media screen and (max-width: 1250px) {
+  .center {
+    width: 97%;
+  }
+}
 @media screen and (max-width: 1185px) {
   header.principal-header .wrapper-logo {
     width: 200px;
@@ -1075,21 +1091,31 @@ footer#footer .copyright p {
   margin-left: 0;
 }
 .menu-multinivel .menu li:hover a {
-  color: #dddc00;
+  color: black;
 }
 .menu-multinivel .menu li:hover a:after {
   display: block;
 }
 .menu-multinivel .menu li a {
-  color: #dddc00;
+  color: black;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 1.25em;
+  font-size: 1em;
   padding-bottom: 10px;
   position: relative;
 }
+.menu-multinivel .menu li a:before {
+  content: url(../../src/images/menu-bullet.png);
+  opacity: 0;
+  vertical-align: middle;
+  margin-left: 5px;
+}
 .menu-multinivel .menu li a:hover {
   text-decoration: none;
+  color: #42F9FF;
+}
+.menu-multinivel .menu li a:hover:before {
+  opacity: 1;
 }
 .menu-multinivel .menu .sub-menu {
   width: 170px;
@@ -1183,10 +1209,10 @@ footer#footer .copyright p {
 }
 .menu-multinivel .menu .sub-menu li .sub-menu.sub-menu-show li {
   white-space: initial;
-  background-color: #c4c300;
+  background-color: black;
 }
 .menu-multinivel .menu .sub-menu li .sub-menu.sub-menu-show li:hover {
-  background-color: #b4b300;
+  background-color: black;
 }
 .menu-multinivel .menu .sub-menu li .sub-menu.sub-menu-show li a {
   font-size: 0.9em;
@@ -1319,10 +1345,10 @@ footer#footer .copyright p {
     display: none;
   }
   .menu .sub-menu li a {
-    color: #dddc00;
+    color: black;
   }
   .menu .sub-menu li:hover {
-    background-color: #aaa900;
+    background-color: black;
   }
   .menu .sub-menu li:hover .sub-menu {
     display: none;
@@ -1470,7 +1496,7 @@ footer#footer .copyright p {
   }
   .rmm .menu li .sub-menu li a {
     font-size: 13px;
-    color: #dddc00;
+    color: black;
   }
   .rmm .menu li .sub-menu li a:focus {
     color: #fff;
