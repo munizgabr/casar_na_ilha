@@ -17,13 +17,7 @@ get_header();?>
 							get_template_part( 'content/content', $component );
 						endif;
 					}, [
-						'banner',
-						'cta',
-						'scroll',
-						'form',
-						'testimonial',
-						'industry',
-						'tabs',
+						'slider'
 					]);
 				endwhile;
 				else :
