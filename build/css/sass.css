@@ -997,6 +997,7 @@ header.principal-header .wrapper-logo {
 }
 header.principal-header .center-header {
   background-color: white;
+  opacity: 0.75;
 }
 header.principal-header .wrapper-header {
   display: flex;
@@ -1101,7 +1102,7 @@ footer#footer .copyright p {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1em;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
   position: relative;
 }
 .menu-multinivel .menu li a:before {
@@ -4144,6 +4145,35 @@ footer#footer .copyright p {
     width: 95%;
   }
 }
+.main-slider__controller {
+  background: no-repeat center center url(../../src/images/wedding.jpg);
+  background-size: 100%;
+  background-attachment: fixed;
+  padding: 50px 10px;
+  height: 80vh;
+  margin-top: -20px;
+}
+
+.main-slider .main-slider__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 100%;
+}
+.main-slider .main-slider__content .description {
+  font-size: 1.5em;
+  color: white;
+  font-weight: bold;
+}
+
 .wow {
   visibility: hidden;
+}
+
+.btn {
+  justify-self: end;
+  font-size: 1em;
+  background-color: antiquewhite;
+  padding: 20px 20px;
+  border-radius: 6px;
 }

@@ -9,12 +9,19 @@
 @import "./components/buttons";
 @import "./components/animate";
 @import "./components/modal";
+@import "./components/main-slider";
 
 .wow {
 
     visibility: hidden;
 }
-
+.btn {
+    justify-self: end;
+    font-size: 1em;
+    background-color: antiquewhite;
+    padding: 20px 20px;
+    border-radius: 6px;
+}
 @media screen and (max-width: 1185px) {
 	
 
