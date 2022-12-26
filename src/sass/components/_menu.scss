@@ -113,13 +113,13 @@
 					content: url(../../src/images/menu-bullet.png);
 					opacity: 0;
 					vertical-align: middle;
-					margin-left: 5px;
+					margin-right: 5px;
 				}
 
 				&:hover {
 
 					text-decoration: none;
-					color: #42F9FF;
+					color: #B48B3C;
 					&:before {
 						opacity: 1;
 					}

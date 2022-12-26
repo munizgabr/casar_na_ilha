@@ -9,6 +9,51 @@
 	&.col-6{width: 16.6%}
 }
 
+.wrapper-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 45px;
+	padding: 45px 0;
+	.wrapper-grid__controller {
+		overflow: hidden;
+	}
+	.wrapper-grid__cta {
+		text-align: center;
+		padding: 200px 0;
+		&:hover {
+			transform: scale(1.2);
+			transition-duration: 1s;
+		}
+
+		a {
+			font-size: 2em;
+			color: white;
+			text-decoration: none;
+			font-weight: bold;
+			border: 2px solid white;
+			padding: 10px 5px;
+			position: relative;
+			
+		}
+		&:hover a{
+			border: none;
+			&:before{
+				content: "";
+				border-bottom: 2px solid white;
+				position: absolute;
+				bottom: -5px;
+				left: 0;
+				right: 0;
+				margin: auto;
+				width: 40px;
+				letter-spacing: 1px;
+				transition-duration: 1s;
+				
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 860px) {
 
 	.col{

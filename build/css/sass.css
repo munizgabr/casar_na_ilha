@@ -15,7 +15,7 @@ select {
  *    user zoom.
  */
 html {
-  font-family: sans-serif;
+  font-family: "Playfair", sans-serif;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -413,12 +413,12 @@ body {
 }
 
 body, html, p, address {
-  font-family: "Arial";
+  font-family: "Playfair";
 }
 
 * {
   box-sizing: border-box;
-  font-family: "Arial";
+  font-family: "Playfair";
 }
 
 img {
@@ -588,28 +588,28 @@ a img.aligncenter {
 }
 ::-webkit-input-placeholder {
   color: #bababa;
-  font-family: "Arial";
+  font-family: "Playfair";
   font-size: 1em;
   font-style: normal;
 }
 
 :-moz-placeholder {
   color: #bababa;
-  font-family: "Arial";
+  font-family: "Playfair";
   font-size: 1em;
   font-style: normal;
 }
 
 ::-moz-placeholder {
   color: #bababa;
-  font-family: "Arial";
+  font-family: "Playfair";
   font-size: 1em;
   font-style: normal;
 }
 
 :-ms-input-placeholder {
   color: #bababa;
-  font-family: "Arial";
+  font-family: "Playfair";
   font-size: 1em;
   font-style: normal;
 }
@@ -715,7 +715,7 @@ textarea, .wpcf7-form-control-wrap.arquivo {
   background-color: #f7f9f9;
   border: 1px solid #ced3d3;
   color: #595959;
-  font-family: "Arial";
+  font-family: "Playfair";
   font-size: 16px;
   border-radius: 17px;
 }
@@ -757,7 +757,7 @@ select {
   appearance: none;
   /* Remove estilo padrão do FireFox*/
   height: 65px;
-  font-family: "Arial";
+  font-family: "Playfair";
   color: #a0a0a0;
 }
 
@@ -819,25 +819,25 @@ div.wpcf7-acceptance-missing {
 ::-webkit-input-placeholder {
   color: #919b9b;
   font-size: 16px;
-  font-family: "Arial";
+  font-family: "Playfair";
 }
 
 :-moz-placeholder {
   color: #919b9b;
   font-size: 16px;
-  font-family: "Arial";
+  font-family: "Playfair";
 }
 
 ::-moz-placeholder {
   color: #919b9b;
   font-size: 16px;
-  font-family: "Arial";
+  font-family: "Playfair";
 }
 
 :-ms-input-placeholder {
   color: #919b9b;
   font-size: 16px;
-  font-family: "Arial";
+  font-family: "Playfair";
 }
 
 .wpcf7 form .wpcf7-response-output {
@@ -1109,11 +1109,11 @@ footer#footer .copyright p {
   content: url(../../src/images/menu-bullet.png);
   opacity: 0;
   vertical-align: middle;
-  margin-left: 5px;
+  margin-right: 5px;
 }
 .menu-multinivel .menu li a:hover {
   text-decoration: none;
-  color: #42F9FF;
+  color: #B48B3C;
 }
 .menu-multinivel .menu li a:hover:before {
   opacity: 1;
@@ -1543,6 +1543,48 @@ footer#footer .copyright p {
 }
 .col.col-6 {
   width: 16.6%;
+}
+
+.wrapper-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 45px;
+  padding: 45px 0;
+}
+.wrapper-grid .wrapper-grid__controller {
+  overflow: hidden;
+}
+.wrapper-grid .wrapper-grid__cta {
+  text-align: center;
+  padding: 200px 0;
+}
+.wrapper-grid .wrapper-grid__cta:hover {
+  transform: scale(1.2);
+  transition-duration: 1s;
+}
+.wrapper-grid .wrapper-grid__cta a {
+  font-size: 2em;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid white;
+  padding: 10px 5px;
+  position: relative;
+}
+.wrapper-grid .wrapper-grid__cta:hover a {
+  border: none;
+}
+.wrapper-grid .wrapper-grid__cta:hover a:before {
+  content: "";
+  border-bottom: 2px solid white;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 40px;
+  letter-spacing: 1px;
+  transition-duration: 1s;
 }
 
 @media screen and (max-width: 860px) {
@@ -4166,6 +4208,35 @@ footer#footer .copyright p {
   font-weight: bold;
 }
 
+.gallery {
+  display: grid;
+  gap: 10px;
+}
+.gallery h2, .gallery span, .gallery p {
+  text-align: center;
+}
+.gallery h2 {
+  color: #B48B3C;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2.1em;
+}
+.gallery span {
+  text-transform: uppercase;
+  font-size: 1.4em;
+  color: #B48B3C;
+  text-align: center;
+}
+.gallery p {
+  color: #c8a35b;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+body {
+  font-family: Playfair;
+}
+
 .wow {
   visibility: hidden;
 }
@@ -4173,7 +4244,13 @@ footer#footer .copyright p {
 .btn {
   justify-self: end;
   font-size: 1em;
-  background-color: antiquewhite;
+  background-color: #B48B3C;
   padding: 20px 20px;
   border-radius: 6px;
+  color: white;
+}
+.btn:hover {
+  background-color: #7b5f29;
+  color: white;
+  text-decoration: none;
 }

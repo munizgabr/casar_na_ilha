@@ -1,0 +1,25 @@
+.gallery {
+    display: grid;
+    gap: 10px;
+    h2, span, p {
+        text-align: center;
+    }
+    h2 {
+        color: #B48B3C;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 2.1em;
+    }
+    span {
+        text-transform: uppercase;
+        font-size: 1.4em;
+        color: #B48B3C;
+        text-align: center;
+    }
+    p {
+        color: lighten($color: #B48B3C, $amount: 10%);
+        font-size: 1.4em;
+        text-align: center;
+    }
+
+}
