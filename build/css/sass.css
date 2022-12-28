@@ -4211,26 +4211,77 @@ footer#footer .copyright p {
 .gallery {
   display: grid;
   gap: 10px;
+  margin-top: 40px;
 }
 .gallery h2, .gallery span, .gallery p {
   text-align: center;
 }
 .gallery h2 {
-  color: #B48B3C;
+  color: #3E454C;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 2.1em;
+  font-size: 2.3em;
 }
 .gallery span {
   text-transform: uppercase;
   font-size: 1.4em;
-  color: #B48B3C;
+  color: #3E454C;
   text-align: center;
 }
 .gallery p {
-  color: #c8a35b;
+  color: #555f68;
   font-size: 1.4em;
   text-align: center;
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 25px;
+  margin: 25px 0;
+}
+.gallery__grid .gallery__item {
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+.gallery__grid .gallery__item:hover .opacity {
+  display: flex;
+}
+.gallery__grid .gallery__item .opacity {
+  background-color: rgba(0, 0, 0, 0.5019607843);
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  transition: all 2s;
+  flex-direction: column;
+  gap: 5px;
+}
+.gallery__grid .gallery__item .opacity span {
+  color: white;
+}
+.gallery__grid .gallery__item .opacity:hover {
+  text-decoration: none;
+}
+.gallery__grid .gallery__item .opacity .cursive {
+  font-family: "Caveat", cursive;
+}
+.gallery__grid .gallery__item img {
+  height: 100%;
+}
+.gallery__grid .gallery__grid--item6 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 4;
 }
 
 body {

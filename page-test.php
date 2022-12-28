@@ -40,5 +40,99 @@ get_header();?>
     <h2>Um casamento com o seu estilo</h2>
     <span>Fotógrafos proficionais</span>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quia? Nemo beatae, non incidunt rerum maxime, nesciunt architecto quidem impedit animi repudiandae obcaecati enim, cum earum ducimus! Rem, cumque ducimus.</p>
+    <div class="gallery__grid center">
+        <a href="#" title="" class="gallery__item gallery__grid--item1">
+            <img src="<?php bloginfo('template_url');?>/src/images/item1.jpg" alt="Imagem">
+            <div class="opacity">
+                <span>testando</span>
+                <span class="cursive">123</span>
+            </div>
+        </a>
+        <a href="#" title="" class="gallery__item gallery__grid--item2">
+            <img src="<?php bloginfo('template_url');?>/src/images/item2.jpg" alt="Imagem">
+            <div class="opacity">
+                <span>testando</span>
+                <span class="cursive">123</span>
+            </div>
+        </a>
+        <a href="#" title="" class="gallery__item gallery__grid--item3">
+            <img src="<?php bloginfo('template_url');?>/src/images/item3.jpg" alt="Imagem">
+            <div class="opacity">
+                <span>testando</span>
+                <span class="cursive">123</span>
+            </div>
+        </a>
+        <a href="#" title="" class="gallery__item gallery__grid--item4">
+            <img src="<?php bloginfo('template_url');?>/src/images/item4.jpg" alt="Imagem">
+            <div class="opacity">
+                <span>testando</span>
+                <span class="cursive">123</span>
+            </div>
+        </a>
+        <a href="#" title="" class="gallery__item gallery__grid--item5">
+            <img src="<?php bloginfo('template_url');?>/src/images/item1.jpg" alt="Imagem">
+            <div class="opacity">
+                <span>testando</span>
+                <span class="cursive">123</span>
+            </div>
+        </a>
+        <a href="#" title="" class="gallery__item gallery__grid--item6">
+            <img src="<?php bloginfo('template_url');?>/src/images/item2.jpg" alt="Imagem">
+            <div class="opacity">
+                <span>testando</span>
+                <span class="cursive">123</span>
+            </div>
+        </a>
+        <a href="#" title="" class="gallery__item gallery__grid--item7">
+            <img src="<?php bloginfo('template_url');?>/src/images/item3.jpg" alt="Imagem">
+            <div class="opacity">
+                <span>testando</span>
+                <span class="cursive">123</span>
+            </div>
+        </a>
+        <a href="#" title="" class="gallery__item gallery__grid--item8">
+            <img src="<?php bloginfo('template_url');?>/src/images/item4.jpg" alt="Imagem">
+            <div class="opacity">
+                <span>testando</span>
+                <span class="cursive">123</span>
+            </div>
+        </a>
+        <a href="#" title="" class="gallery__item gallery__grid--item9">
+            <img src="<?php bloginfo('template_url');?>/src/images/item1.jpg" alt="Imagem">
+            <div class="opacity">
+                <span>testando</span>
+                <span class="cursive">123</span>
+            </div>
+        </a>
+        <a href="#" title="" class="gallery__item gallery__grid--item10">
+            <img src="<?php bloginfo('template_url');?>/src/images/item2.jpg" alt="Imagem">
+            <div class="opacity">
+                <span>testando</span>
+                <span class="cursive">123</span>
+            </div>
+        </a>
+        <a href="#" title="" class="gallery__item gallery__grid--item11">
+            <img src="<?php bloginfo('template_url');?>/src/images/item3.jpg" alt="Imagem">
+            <div class="opacity">
+                <span>testando</span>
+                <span class="cursive">123</span>
+            </div>
+        </a>
+        <a href="#" title="" class="gallery__item gallery__grid--item12">
+            <img src="<?php bloginfo('template_url');?>/src/images/item4.jpg" alt="Imagem">
+            <div class="opacity">
+                <span>testando</span>
+                <span class="cursive">123</span>
+            </div>
+        </a>
+        <a href="#" title="" class="gallery__item gallery__grid--item13">
+            <img src="<?php bloginfo('template_url');?>/src/images/item1.jpg" alt="Imagem">
+            <div class="opacity">
+                <span>testando</span>
+                <span class="cursive">123</span>
+            </div>
+        </a>
+        
+    </div>
 </section>
 <?php get_footer(); ?>
