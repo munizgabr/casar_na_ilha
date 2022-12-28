@@ -24,6 +24,7 @@ function soma_enqueue_scripts_input(){
 
   // CSS
   wp_enqueue_style( 'global', get_template_directory_uri() . "/build/css/global.css", array(), somadev_VERSION );
+  wp_enqueue_style( 'caveat', 'https://fonts.googleapis.com/css2?family=Caveat&display=swap', array(), somadev_VERSION );
 
   // SWIPER JS
   wp_enqueue_script('jsswiper', 'https://unpkg.com/swiper@8/swiper-bundle.min.js', array(), somadev_VERSION);
