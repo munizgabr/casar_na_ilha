@@ -8,14 +8,15 @@ get_header();?>
 
 <!-- slider -->
 <section class="main-slider main-slider__controller">
-    <div class="center main-slider__content">
+    <!-- <div class="center main-slider__content">
         <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos amet facilis natus, fugit deserunt molestiae soluta dolores magnam eaque nisi fugiat, temporibus quos, perferendis placeat recusandae mollitia ad delectus?</div>
         <a class="btn" href="#" title="Saiba mais">Saiba mais!</a>
-    </div>
+    </div> -->
+    <?php get_search_form(); ?>
 </section>
 
 <!-- grid -->
-<section class="center">
+<!-- <section class="center">
     <div class="wrapper-grid">
         <div class="wrapper-grid__controller">
             <div class="wrapper-grid__cta" style="background: no-repeat center center url(<?php echo get_bloginfo('template_url')?>/src/images/casamento.jpg);">
@@ -33,8 +34,7 @@ get_header();?>
             </div>
         </div>
     </div>
-</section>
-
+</section> -->
 <!-- gallery -->
 <section class="center gallery">
     <h2>Um casamento com o seu estilo</h2>
@@ -133,6 +133,51 @@ get_header();?>
             </div>
         </a>
         
+    </div>
+</section>
+
+<!-- Top rating fornecedores -->
+<section class="awards center">
+    <div class="destaques">
+        <div class="destaques__wrapper"><h2>Empresas em destaque <img src="<?php bloginfo('template_url')?>/src/images/awards.png" alt="Vencedores"></h2><a class="destaques__wrapper--btn" href="#" title="Conheça todos os fornecedores">Conheça todos os fornecedores</a></div>
+        <div class="awards__wrapper">
+            <div class="awards__wrapper--content">
+                <img src="<?php bloginfo('template_url')?>/src/images/luna_coco.jpg" alt="Fornecedor Luna coco">
+                <div class="awards__wapper--text">
+                    <span class="fornecedor-name"><img src="<?php bloginfo('template_url')?>/src/images/star.png" alt="Avaliação"> Luna Coco</span>
+                    <span class="fornecedor-address"><img src="<?php bloginfo('template_url')?>/src/images/location.png" alt="Localização"> Armação, Ilhabela</span>
+                    <a href="#" title="Localização fornecedor" class="fornecedor-cost"><img src="<?php bloginfo('template_url')?>/src/images/custo.png" alt="Localização">Entre R$10.000,00 e R$25.000,00</a>
+                    <span class="fornecedor-capacity"><img src="<?php bloginfo('template_url')?>/src/images/capacity.png" alt="Capacidade do espaço"> Capacidade: <span>Até 200 pessoas</span></span>
+                </div>
+            </div>
+            <div class="awards__wrapper--content">
+                <img src="<?php bloginfo('template_url')?>/src/images/luna_coco.jpg" alt="Fornecedor Luna coco">
+                <div class="awards__wapper--text">
+                    <span class="fornecedor-name"><img src="<?php bloginfo('template_url')?>/src/images/star.png" alt="Avaliação"> Luna Coco</span>
+                    <span class="fornecedor-address"><img src="<?php bloginfo('template_url')?>/src/images/location.png" alt="Localização"> Armação, Ilhabela</span>
+                    <a href="#" title="Localização fornecedor" class="fornecedor-cost"><img src="<?php bloginfo('template_url')?>/src/images/custo.png" alt="Localização">Entre R$10.000,00 e R$25.000,00</a>
+                    <span class="fornecedor-capacity"><img src="<?php bloginfo('template_url')?>/src/images/capacity.png" alt="Capacidade do espaço"> Capacidade: <span>Até 200 pessoas</span></span>
+                </div>
+            </div>
+            <div class="awards__wrapper--content">
+                <img src="<?php bloginfo('template_url')?>/src/images/luna_coco.jpg" alt="Fornecedor Luna coco">
+                <div class="awards__wapper--text">
+                    <span class="fornecedor-name"><img src="<?php bloginfo('template_url')?>/src/images/star.png" alt="Avaliação"> Luna Coco</span>
+                    <span class="fornecedor-address"><img src="<?php bloginfo('template_url')?>/src/images/location.png" alt="Localização"> Armação, Ilhabela</span>
+                    <a href="#" title="Localização fornecedor" class="fornecedor-cost"><img src="<?php bloginfo('template_url')?>/src/images/custo.png" alt="Localização">Entre R$10.000,00 e R$25.000,00</a>
+                    <span class="fornecedor-capacity"><img src="<?php bloginfo('template_url')?>/src/images/capacity.png" alt="Capacidade do espaço"> Capacidade: <span>Até 200 pessoas</span></span>
+                </div>
+            </div>
+            <div class="awards__wrapper--content">
+                <img src="<?php bloginfo('template_url')?>/src/images/luna_coco.jpg" alt="Fornecedor Luna coco">
+                <div class="awards__wapper--text">
+                    <span class="fornecedor-name"><img src="<?php bloginfo('template_url')?>/src/images/star.png" alt="Avaliação"> Luna Coco</span>
+                    <span class="fornecedor-address"><img src="<?php bloginfo('template_url')?>/src/images/location.png" alt="Localização"> Armação, Ilhabela</span>
+                    <a href="#" title="Localização fornecedor" class="fornecedor-cost"><img src="<?php bloginfo('template_url')?>/src/images/custo.png" alt="Localização">Entre R$10.000,00 e R$25.000,00</a>
+                    <span class="fornecedor-capacity"><img src="<?php bloginfo('template_url')?>/src/images/capacity.png" alt="Capacidade do espaço"> Capacidade: <span>Até 200 pessoas</span></span>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <?php get_footer(); ?>

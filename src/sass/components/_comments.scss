@@ -1,0 +1,57 @@
+#comments{
+    width:630px;
+    float:left;
+    border-top:1px solid #bebebe;
+    }
+ 
+#comments h3{
+    font-size:14px;
+    margin:20px 0;
+    }
+ 
+ol.commentlist{
+    list-style:none;
+    }
+ 
+ol.commentlist li{
+    margin-bottom:30px;
+    }
+ 
+ol.commentlist ul{
+    margin:0px;
+    }
+ 
+ol.commentlist ul li{
+    margin:20px 20px 20px 40px;
+    }
+ 
+#respond{
+    margin:0 0 30px 0;
+    clear:both;
+    }
+ 
+#respond form label{
+    float:left;
+    clear:left;
+    width:60px;
+    text-align:right;
+    margin-right:10px;
+    }
+ 
+#respond form input{
+    float:left;
+    width:250px;
+    margin-bottom:10px;
+    }
+ 
+#respond form textarea{
+    float:left;
+    width:400px;
+    height:100px;
+    margin-bottom:10px;
+    }
+ 
+#respond form input.commentsubmit{
+    float:left;
+    margin-left:70px;
+    }

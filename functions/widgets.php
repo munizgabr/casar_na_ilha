@@ -64,4 +64,14 @@ function somadev_widgets_init() {
         'after_title' => '</h4>',
     ));
 
+    register_sidebar ( array (
+        'name' => __( 'Search bar', 'somadev' ),
+        'id' => 'search',
+        'description' => __( 'Exibição de barra de pesquisa na home', 'somadev' ),
+        'before_widget' => '<div class="widget searchbar">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4>',
+        'after_title' => '</h4>',
+    ));
+
 }
