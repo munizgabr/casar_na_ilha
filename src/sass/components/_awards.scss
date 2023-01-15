@@ -1,5 +1,6 @@
 .awards {
     .destaques {
+        margin-top: 50px;
         h2 {
             display: flex;
             align-items: center;
@@ -9,6 +10,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 25px;
             .destaques__wrapper--btn {
                 color: #808b8b;
                 font-size: 1.4em;
@@ -27,7 +29,9 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 25px;
         .awards__wrapper--content {
-            padding: 25px 0;
+            border-radius: 5px;
+            overflow: hidden;
+            padding-bottom: 25px;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
             &:hover {
                 transform: scale(1.02);
@@ -42,7 +46,7 @@
         display: flex;
         flex-direction: column;
         gap: 5px;
-        margin-top: 5px;
+        margin-top: 15px;
         padding: 0 10px;
         span, a {
             display: flex;

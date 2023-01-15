@@ -7,12 +7,38 @@
 get_header();?>
 
 <!-- slider -->
-<section class="main-slider main-slider__controller">
-    <!-- <div class="center main-slider__content">
-        <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos amet facilis natus, fugit deserunt molestiae soluta dolores magnam eaque nisi fugiat, temporibus quos, perferendis placeat recusandae mollitia ad delectus?</div>
-        <a class="btn" href="#" title="Saiba mais">Saiba mais!</a>
-    </div> -->
-    <?php get_search_form(); ?>
+<section class="main-slider">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide main-slider__controller" style="background: no-repeat center center url(<?php bloginfo('template_url');?>/src/images/wedding.jpg);
+        background-size: 100%;
+        background-attachment: fixed;
+        padding: 50px 10px;
+        height: 80vh;
+        margin-top: -20px;
+        position: relative;">
+            <!-- <?php get_search_form(); ?> -->
+        </div>
+
+        <div class="swiper-slide main-slider__controller" style="background: no-repeat center center url(<?php bloginfo('template_url');?>/src/images/praia.jpg);
+        background-size: 100%;
+        background-attachment: fixed;
+        padding: 50px 10px;
+        height: 80vh;
+        margin-top: -20px;
+        position: relative;">
+            <!-- <?php get_search_form(); ?> -->
+        </div>
+
+        <div class="swiper-slide main-slider__controller" style="background: no-repeat center center url(<?php bloginfo('template_url');?>/src/images/abacaxi.jpg);
+        background-size: 100%;
+        background-attachment: fixed;
+        padding: 50px 10px;
+        height: 80vh;
+        margin-top: -20px;
+        position: relative;">
+            <!-- <?php get_search_form(); ?> -->
+        </div>
+    </div>
 </section>
 
 <!-- grid -->

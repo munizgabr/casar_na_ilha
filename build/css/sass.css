@@ -4299,6 +4299,9 @@ footer#footer .copyright p {
   gap: 37px;
 }
 
+.awards .destaques {
+  margin-top: 50px;
+}
 .awards .destaques h2 {
   display: flex;
   align-items: center;
@@ -4308,6 +4311,7 @@ footer#footer .copyright p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 25px;
 }
 .awards .destaques .destaques__wrapper .destaques__wrapper--btn {
   color: #808b8b;
@@ -4326,7 +4330,9 @@ footer#footer .copyright p {
   gap: 25px;
 }
 .awards .awards__wrapper .awards__wrapper--content {
-  padding: 25px 0;
+  border-radius: 5px;
+  overflow: hidden;
+  padding-bottom: 25px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 .awards .awards__wrapper .awards__wrapper--content:hover {
@@ -4340,7 +4346,7 @@ footer#footer .copyright p {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  margin-top: 5px;
+  margin-top: 15px;
   padding: 0 10px;
 }
 .awards .awards__wapper--text span, .awards .awards__wapper--text a {

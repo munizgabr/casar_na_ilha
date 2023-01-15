@@ -91,28 +91,15 @@ function soma_activate_scripts(){
     // SWIPER MAIN
     const swiper_testimonial = new Swiper('.main-slider', {
       loop: true,
+      slidesPerView: 1,
       autoplay: {
-          delay: 20000,
+          delay: 5000,
           disableOnInteraction: false,
       },
       paginationClickable: false,
       pagination: {
           el: '.swiper-pagination',
           clickable: true,
-      },
-      breakpoints: {
-          1101: {
-              slidesPerView: 3,
-              spaceBetween: 100
-          },
-          600: {
-              slidesPerView: 2,
-              spaceBetween: 20
-          },
-          300: {
-              slidesPerView: 1,
-              spaceBetween: 90
-          }
       },
       navigation: {
           nextEl: '.swiper-button-next-testimonial',
