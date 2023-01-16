@@ -13,13 +13,13 @@
 		    position: absolute;
 		    transform: rotate(45deg);
 		    -webkit-transform: rotate(45deg);
-		    border: solid #00b0a0;
+		    border: solid #B48B3C;
 		    border-width: 0 2px 2px 0;
 		    display: inline-block;
 		    padding: 3px;
 		    content: "";
 		    right: 0;
-	    	top: 5px;
+	    	top: 4px;
 		}
 	}
 
@@ -60,6 +60,7 @@
 					li {
 
 						text-align: right;
+						color: black;
 					}
 				}
 			}
@@ -119,7 +120,7 @@
 				&:hover {
 
 					text-decoration: none;
-					color: #B48B3C;
+					color: #B48B3C !important;
 					&:before {
 						opacity: 1;
 					}
@@ -131,13 +132,13 @@
 
 		.sub-menu {
 
-			width: 170px;
+			width: 300px;
 			z-index: 9;
 			margin-top: 0px;
 			margin: 0;
 			padding: 0;
 			top: 25px;
-			background-color: #e4e9e8;
+			background-color: #fff;
 			padding-top: 12px;
 			padding-bottom: 12px;
 			box-shadow: 8px 8px 20px rgba(51, 51, 51, 0.38);
@@ -200,7 +201,7 @@
 						top: 0;
 						padding-top: 0;
 						padding-bottom: 0;
-						background-color: $green;
+						background-color: transparent;
 						left: 170px;
 
 						li {
@@ -209,7 +210,7 @@
 
 							&:hover {
 
-								background-color: darken($green, 5%);
+								background-color: darken(transparent, 5%);
 							}
 
 							&.menu-item-has-children {
@@ -324,12 +325,12 @@
 
 				&:hover {
 
-					background: $green;
+					background: transparent;
 
 
 					a {
 
-						color: #fff;
+						color: #000;
 					}
 				}
 
@@ -344,7 +345,7 @@
 					padding-top: 7px;
 					padding-bottom: 6px;
 					font-size: 1.1em;
-					color: $green;
+					color: black;
 					font-weight: 300;
 
 					&:after {
@@ -559,11 +560,11 @@
 
 							white-space: initial;
 							display: block;
-							background-color: darken($green, 5%);
+							background-color: darken(transparent, 5%);
 
 							a {
 
-								color: #fff;
+								color: #B48B3C;
 							}
 
 							&:hover {
@@ -579,7 +580,7 @@
 
 								    	a {
 
-								    		background-color: darken($green, 8%);
+								    		background-color: darken(transparent, 8%);
 								    	}
 								    }
 								}
@@ -615,7 +616,7 @@
 		padding: 10px;
 		display: block;
 		top: 60px;
-		background: $green;
+		background: transparent;
 		width: 38px;
 		height: 44px;
 
@@ -753,8 +754,8 @@
 
 			    			a {
 
-			    				color: #fff;
-			    				background-color: $green;
+			    				color: #B48B3C;
+			    				background-color: transparent;
 			    			}
 			    		}
 
@@ -770,7 +771,7 @@
 
 			    			&:focus {
 
-			    				color: #fff;
+			    				color: #B48B3C;
 			    			}
 			    		}
 			    	}
@@ -797,7 +798,7 @@
 	                padding: 10px;
 	                display: inline-block;
 	                margin: 0;
-	                color: #fff;
+	                color: #B48B3C;
 	                -webkit-box-sizing: border-box;
 					-moz-box-sizing: border-box;
 					box-sizing: border-box;
@@ -806,7 +807,7 @@
 	                &:hover {
 
 	                	text-decoration: none;
-	                	color: #fff;
+	                	color: #B48B3C;
 	                }
 
 	            }

@@ -64,7 +64,7 @@ get_header();?>
 <!-- gallery -->
 <section class="center gallery">
     <h2>Um casamento com o seu estilo</h2>
-    <span>Fotógrafos proficionais</span>
+    <span>Fotógrafos profissionais</span>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quia? Nemo beatae, non incidunt rerum maxime, nesciunt architecto quidem impedit animi repudiandae obcaecati enim, cum earum ducimus! Rem, cumque ducimus.</p>
     <div class="gallery__grid center">
         <a href="#" title="" class="gallery__item gallery__grid--item1">

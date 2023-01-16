@@ -1,13 +1,29 @@
 @import 'avariables';
 
-footer#footer{
-    background-color: lighten($gray, 20%);
-    padding-top: 20px;
-    .copyright{
-        background-color: $gray;
-        padding: 10px 0;
-        p{
-            color:#fff;
+.wrapper-footer {
+    background-color: #EFEEEE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    margin-top: 60px;
+    .footer-menu3 {
+        display: flex;
+        gap: 5px;
+    }
+    svg {
+        fill: black;
+    }
+    .widget {
+        a {
+            color: black;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        h4 {
+            font-size: 2em;
+            font-weight: bold;
         }
     }
 }
