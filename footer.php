@@ -14,6 +14,9 @@
 				<a href="https://facebook.com" title="Facebook Parker" target="_blank" class="group"><svg class="group-hover:opacity-50" fill="white" style="background-color: transparent;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/></svg></a>
 				<a href="https://youtube.com" title="Youtube Parker" target="_blank" class="group"><svg class="group-hover:opacity-50" fill="white" style="background-color: transparent;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg></a>
 			</div>
+			<div class="copyright">
+				<span>&copy&nbsp Casar na Ilha</span>
+			</div>
 		</footer>
 		<?php wp_footer(); ?>
 	</body>

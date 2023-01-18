@@ -89,7 +89,7 @@ function soma_activate_scripts(){
     });
 
     // SWIPER MAIN
-    const swiper_testimonial = new Swiper('.main-slider', {
+    const swiper_main = new Swiper('.main-slider', {
       loop: true,
       slidesPerView: 1,
       autoplay: {
@@ -107,6 +107,24 @@ function soma_activate_scripts(){
       },
     });
 
+    // SWIPER SUPPORTERS
+    // const swiper_supporters = new Swiper('.supporters-slider', {
+    //   loop: true,
+    //   slidesPerView: 4,
+    //   autoplay: {
+    //       delay: 5000,
+    //       disableOnInteraction: false,
+    //   },
+    //   paginationClickable: false,
+    //   pagination: {
+    //       el: '.swiper-pagination',
+    //       clickable: true,
+    //   },
+    //   navigation: {
+    //       nextEl: '.swiper-button-next-supporters',
+    //       prevEl: '.swiper-button-prev-supporters',
+    //   },
+    // });
 </script>
 
 <?php
