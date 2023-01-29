@@ -2,6 +2,7 @@
     margin-top: 114px;
     display: grid;
     grid-template-columns: 70% 30%;
+    gap: 25px;
     p {
         opacity: 1;
     }
@@ -12,6 +13,17 @@
     justify-content: center;
     align-items: start;
     .single-partner__info {
+        .wrapper-partner {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+            a, span {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+        }
         .swiper-partner__content {
             .swiper-slide {
                 height: 60vh;
@@ -27,6 +39,40 @@
     .single-partner__info--wrapper {
         display: flex;
         flex-direction: column;
+
+        .contact {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .contact__icon {
+                display: flex;
+                justify-content: space-between;
+                .icon-whatsapp {
+                    background-color: #0ca90c;
+                    border-radius: 100%;
+                    padding: 20px;
+                }
+                .icon-instagram {
+                    background: #f09433; 
+                    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+                    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+                    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+                    border-radius: 100%;
+                    padding: 20px;
+                }
+                .icon-facebook {
+                    background-color: #2050b3;
+                    border-radius: 100%;
+                    padding: 20px;
+                }
+            }
+            svg {
+                width: 65px;
+                height: 65px;
+                fill: white;
+            }
+        }
         span {
             margin-top: 15px;
             margin-bottom: 5px;
