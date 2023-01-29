@@ -13,6 +13,15 @@ function somadev_widgets_init() {
         'before_title' => '',
         'after_title' => '',
     ));
+    register_sidebar ( array (
+        'name' => __( 'Sidebar', 'somadev' ),
+        'id' => 'sidebar',
+        'description' => __( 'Exibição de conteúdo na sidebar', 'somadev' ),
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '',
+        'after_title' => '',
+    ));
 
     register_sidebar ( array (
         'name' => __( 'Topo Direita', 'somadev' ),

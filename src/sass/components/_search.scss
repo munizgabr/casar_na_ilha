@@ -1,8 +1,19 @@
 .search-form {
-    position: absolute;
-    bottom: 50%;
+
     display: grid;
-    margin: 0 auto;
     grid-template-columns: auto auto;
     gap: 37px;
+}
+.sidebar {
+    .search-field {
+        color: #fff;
+        font-size: 0.9rem;
+        background-color: transparent;
+        width: 100%;
+        box-sizing: border-box;
+        padding-inline: 0.5em;
+        padding-block: 0.7em;
+        border: none;
+        border-bottom: var(--border-height) solid var(--border-before-color);
+    }
 }
