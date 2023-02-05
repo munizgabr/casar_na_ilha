@@ -107,6 +107,20 @@ function soma_activate_scripts(){
       },
     });
 
+    const swiper_archive = new Swiper('.archive-slider', {
+      loop: true,
+      slidesPerView: 1,
+      autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+      },
+      paginationClickable: false,
+      pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+      },
+    });
+
     // SWIPER SUPPORTERS
     // const swiper_supporters = new Swiper('.supporters-slider', {
     //   loop: true,
