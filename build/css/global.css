@@ -4697,6 +4697,7 @@ header.principal-header .wrapper-header {
 .gallery {
   display: grid;
   gap: 10px;
+  justify-items: center;
 }
 .gallery h2, .gallery span, .gallery p {
   text-align: center;
@@ -4768,6 +4769,15 @@ header.principal-header .wrapper-header {
   grid-row-end: 4;
 }
 
+@media screen and (max-width: 1000px) {
+  .gallery__grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .gallery__grid .gallery__grid--item6 {
+    grid-column-start: 1;
+  }
+}
 .search-form {
   display: grid;
   grid-template-columns: auto auto;
