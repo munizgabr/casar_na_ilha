@@ -106,7 +106,7 @@ function soma_activate_scripts(){
     const swiper_category = new Swiper('.category-slider', {
       loop: true,
       slidesPerView: 1,
-      spaceBetween: 25,
+      spaceBetween: 45,
       autoplay: {
           delay: 5000,
           disableOnInteraction: false,
@@ -124,12 +124,15 @@ function soma_activate_scripts(){
       // define diferentes opções para diferentes larguras de tela
       768: {
         slidesPerView: 2,
+        spaceBetween: 25,
       },
       1024: {
         slidesPerView: 3,
+        spaceBetween: 35,
       },
       1280: {
         slidesPerView: 4,
+        spaceBetween: 45,
       }
     }
     });
