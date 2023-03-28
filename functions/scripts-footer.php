@@ -88,25 +88,6 @@ function soma_activate_scripts(){
         });
     });
 
-    // SWIPER MAIN
-    const swiper_main = new Swiper('.main-slider', {
-      loop: true,
-      slidesPerView: 1,
-      autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-      },
-      paginationClickable: false,
-      pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-      },
-      navigation: {
-          nextEl: '.swiper-button-next-testimonial',
-          prevEl: '.swiper-button-prev-testimonial',
-      },
-    });
-
     const swiper_archive = new Swiper('.archive-slider', {
       loop: true,
       slidesPerView: 1,
@@ -121,24 +102,37 @@ function soma_activate_scripts(){
       },
     });
 
-    // SWIPER SUPPORTERS
-    // const swiper_supporters = new Swiper('.supporters-slider', {
-    //   loop: true,
-    //   slidesPerView: 4,
-    //   autoplay: {
-    //       delay: 5000,
-    //       disableOnInteraction: false,
-    //   },
-    //   paginationClickable: false,
-    //   pagination: {
-    //       el: '.swiper-pagination',
-    //       clickable: true,
-    //   },
-    //   navigation: {
-    //       nextEl: '.swiper-button-next-supporters',
-    //       prevEl: '.swiper-button-prev-supporters',
-    //   },
-    // });
+    // SWIPER CATEGORY
+    const swiper_category = new Swiper('.category-slider', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 25,
+      autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+      },
+      paginationClickable: false,
+      pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+      },
+      navigation: {
+          nextEl: '.swiper-button-next-category',
+          prevEl: '.swiper-button-prev-category',
+      },
+      breakpoints: {
+      // define diferentes opções para diferentes larguras de tela
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+      1280: {
+        slidesPerView: 4,
+      }
+    }
+    });
 
     var swiper = new Swiper(".mySwiper", {
       effect: "coverflow",

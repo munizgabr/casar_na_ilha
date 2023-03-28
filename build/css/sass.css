@@ -995,7 +995,6 @@ header.principal-header {
   display: inline-block;
   width: 100%;
   vertical-align: top;
-  position: fixed;
   z-index: 44;
   left: 0;
 }
@@ -1010,6 +1009,7 @@ header.principal-header .wrapper-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 @media screen and (max-width: 1250px) {
@@ -1426,16 +1426,18 @@ header.principal-header .wrapper-header {
   }
 
   .nav-item {
-    position: fixed;
+    top: 0;
+    margin: auto;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-color: #B48B3C;
     transform: rotate(0deg);
     transition: 0.05s ease-in-out;
     cursor: pointer;
     z-index: 80;
-    right: 30px;
     padding: 10px;
     display: block;
-    top: 60px;
-    background: transparent;
     width: 38px;
     height: 44px;
   }
@@ -1576,10 +1578,7 @@ header.principal-header .wrapper-header {
 }
 
 .wrapper-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 45px;
-  padding: 45px 0;
+  padding: 45px;
 }
 .wrapper-grid .wrapper-grid__controller {
   overflow: hidden;
@@ -4223,8 +4222,6 @@ header.principal-header .wrapper-header {
   background-attachment: fixed;
   padding: 50px 10px;
   height: 80vh;
-  margin-top: -20px;
-  position: relative;
 }
 
 .main-slider.main-slider--controll {
@@ -4245,7 +4242,6 @@ header.principal-header .wrapper-header {
 .gallery {
   display: grid;
   gap: 10px;
-  margin-top: 145px;
 }
 .gallery h2, .gallery span, .gallery p {
   text-align: center;

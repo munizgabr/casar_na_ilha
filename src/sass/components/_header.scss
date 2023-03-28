@@ -15,7 +15,6 @@ header.principal-header {
 	display: inline-block;
     width: 100%;
     vertical-align: top;
-    position: fixed;
     z-index: 44;
 	left: 0;
 	.wrapper-logo {
@@ -29,6 +28,7 @@ header.principal-header {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		position: relative;
 	}
 
 }

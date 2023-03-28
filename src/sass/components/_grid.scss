@@ -10,10 +10,7 @@
 }
 
 .wrapper-grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	gap: 45px;
-	padding: 45px 0;
+	padding: 45px;
 	.wrapper-grid__controller {
 		overflow: hidden;
 	}
