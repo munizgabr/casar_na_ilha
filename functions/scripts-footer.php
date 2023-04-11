@@ -113,7 +113,7 @@ function soma_activate_scripts(){
       },
       paginationClickable: false,
       pagination: {
-          el: '.swiper-pagination',
+          el: '.swiper-pagination', 
           clickable: true,
       },
       navigation: {

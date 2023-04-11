@@ -15,6 +15,9 @@ require(get_template_directory() . '/functions/scripts-footer.php');
 require(get_template_directory() . '/functions/login-style.php' );
 require(get_template_directory() . '/functions/pagination.php' );
 
+//Custom Posts
+require(get_template_directory() . '/functions/customPosts/fornecedores.php' );
+
 // Widgets
 require(get_template_directory() . '/functions/widgets.php' );
 
