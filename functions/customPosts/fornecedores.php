@@ -1,57 +1,80 @@
 <?php
 
-// Register Custom Post Type
-function hfm_register_custom_post_type() { 
+add_action('init', 'fornecedor_register_init');
 
+function fornecedor_register_init() {
     $labels = array(
-        'name'                  => _x( 'Post Types', 'Post Type General Name', 'text_domain' ),
-        'singular_name'         => _x( 'Post Type', 'Post Type Singular Name', 'text_domain' ),
-        'menu_name'             => __( 'Post Types', 'text_domain' ),
-        'name_admin_bar'        => __( 'Post Type', 'text_domain' ),
-        'archives'              => __( 'Item Archives', 'text_domain' ),
-        'attributes'            => __( 'Item Attributes', 'text_domain' ),
-        'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
-        'all_items'             => __( 'All Items', 'text_domain' ),
-        'add_new_item'          => __( 'Add New Item', 'text_domain' ),
-        'add_new'               => __( 'Add New', 'text_domain' ),
-        'new_item'              => __( 'New Item', 'text_domain' ),
-        'edit_item'             => __( 'Edit Item', 'text_domain' ),
-        'update_item'           => __( 'Update Item', 'text_domain' ),
-        'view_item'             => __( 'View Item', 'text_domain' ),
-        'view_items'            => __( 'View Items', 'text_domain' ),
-        'search_items'          => __( 'Search Item', 'text_domain' ),
-        'not_found'             => __( 'Not found', 'text_domain' ),
-        'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
-        'featured_image'        => __( 'Featured Image', 'text_domain' ),
-        'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
-        'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
-        'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
-        'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
-        'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
-        'items_list'            => __( 'Items list', 'text_domain' ),
-        'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
-        'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
+        'name' => _x( 'Fornecedores', 'post type general name', 'somadev' ),
+        'singular_name' => _x( 'Fornecedor', 'post type singular name', 'somadev' ),
+        'add_new' => _x( 'Adicionar novo', 'fornecedor entry', 'somadev' ),
+        'add_new_item' => __('Adicionar novo fornecedor', 'somadev' ),
+        'edit_item' => __( 'Editar fornecedor', 'somadev' ),
+        'new_item' => __( 'Novo fornecedor', 'somadev' ),
+        'view_item' => __( 'Visualizar fornecedor', 'somadev' ),
+        'search_items' => __( 'Procurar fornecedores', 'somadev' ),
+        'not_found' =>  __( 'Nenhum fornecedor encontrado', 'somadev' ),
+        'not_found_in_trash' => __( 'Nenhum fornecedor foi encontrado na lixeira', 'somadev' ),
+        'parent_item_colon' => ''
     );
-    $args = array(
-        'label'                 => __( 'Post Type', 'text_domain' ),
-        'description'           => __( 'Post Type Description', 'text_domain' ),
-        'labels'                => $labels,
-        'supports'              => false,
-        'taxonomies'            => array( 'category', 'post_tag' ),
-        'hierarchical'          => false,
-        'public'                => true,
-        'show_ui'               => true,
-        'show_in_menu'          => true,
-        'menu_position'         => 5,
-        'show_in_admin_bar'     => true,
-        'show_in_nav_menus'     => true,
-        'can_export'            => true,
-        'has_archive'           => true,
-        'exclude_from_search'   => false,
-        'publicly_queryable'    => true,
-        'capability_type'       => 'page',
-    );
-    register_post_type( 'post_type', $args );
 
+    $args = array( 'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'query_var' => true,
+        'menu_icon' => 'dashicons-networking',
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'menu_position' => null,
+        'supports' => array( 'title', 'thumbnail', 'editor', 'custom-fields' )
+    );
+
+    register_post_type( 'fornecedor', $args );
+    flush_rewrite_rules();
 }
-add_action( 'init', 'hfm_register_custom_post_type' );
+
+register_taxonomy("tipo",
+    array("fornecedor"),
+        array("hierarchical"    => true,
+            "label"           => "Categoria do Fornecedor",
+            "singular_label"  => "Categoria do Fornecedor",
+            "rewrite"         => true
+        )
+);
+
+add_action('save_post', 'save_details_fornecedor');
+
+
+function save_details_fornecedor(){
+  global $post;
+
+
+  if(isset($_POST["fornecedor_pagelink"]))
+    update_post_meta($post->ID, "fornecedor_pagelink", $_POST["fornecedor_pagelink"]);
+}
+
+add_filter("manage_edit-fornecedor_columns", "fornecedor_edit_columns");
+add_action("manage_posts_custom_column",  "fornecedor_custom_columns");
+
+function fornecedor_edit_columns($columns){
+    $columns = array(
+        "cb" => "<input type=\"checkbox\" />",
+        "title" => __('Titulo do fornecedor'),
+        "fornecedor_desc" => __('Resumo fornecedor'),
+        "img-fornecedor" => __('Foto'),
+    );
+    return $columns;
+}
+function fornecedor_custom_columns($column){
+    global $post;
+    switch ($column)
+    {
+        case "fornecedor_desc":
+        the_excerpt();
+        break;
+        case "img-fornecedor":
+        the_post_thumbnail(array(133, 133));
+        break;
+    }
+}

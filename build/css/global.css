@@ -5036,6 +5036,9 @@ svg {
   align-items: center;
   gap: 5px;
 }
+.single-partner .single-partner__info .wrapper-partner a:hover, .single-partner .single-partner__info .wrapper-partner span:hover {
+  text-decoration: none;
+}
 .single-partner .single-partner__info .swiper-partner__content .swiper-slide {
   height: 60vh;
 }
