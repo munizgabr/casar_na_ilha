@@ -4,7 +4,9 @@
  * @package SOMA Dev
  * @since 0.0.1
  */
-get_header();?>
+get_header();
+    $term = get_queried_object();
+?>
     <section class="archive-slider main-slider--controll">
         <div class="swiper-wrapper">
             <div class="swiper-slide main-slider__controller" style="background: no-repeat center center url(<?php bloginfo('template_url');?>/src/images/wedding.jpg);
@@ -35,7 +37,7 @@ get_header();?>
             </div>
         </div>
     </section>
-    <h2 class="category-title">Espaços</h2>
+    <h2 class="category-title"><?php echo $term->name;?></h2>
     <section class="center wrapper-archive">
         <div class="archive-main">
             <div class="archive-main__wrapper">

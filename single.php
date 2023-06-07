@@ -9,7 +9,7 @@ get_header();?>
     <div class="single-partner">
         <div class="single-partner__info">
             <div class="wrapper-partner">
-                <h2>Luna Côco</h2>
+                <h2><?php the_title();?></h2>
                 <a href="#" title="Localização fornecedor" class="fornecedor-cost"><img src="<?php bloginfo('template_url')?>/src/images/custo.png" alt="Localização">Entre R$10.000,00 e R$25.000,00</a>
                 <span class="fornecedor-capacity"><img src="<?php bloginfo('template_url')?>/src/images/capacity.png" alt="Capacidade do espaço"> Capacidade: <span>Até 200 pessoas</span></span>
             </div>
