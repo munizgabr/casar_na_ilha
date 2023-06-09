@@ -4217,7 +4217,6 @@ header.principal-header .wrapper-header {
   }
 }
 .main-slider__controller {
-  background: no-repeat center center url(../../src/images/wedding.jpg);
   background-size: 100%;
   background-attachment: fixed;
   padding: 50px 10px;
