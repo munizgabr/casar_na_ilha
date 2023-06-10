@@ -17,7 +17,7 @@ get_header();?>
 							get_template_part( 'content/content', $component );
 						endif;
 					}, [
-						'slider'
+						'main-slider'
 					]);
 				endwhile;
 				else :
