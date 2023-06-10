@@ -7,10 +7,16 @@
 get_header();?>
 
 <!-- slider -->
-<section class="main-slider main-slider__controller" style="background: fixed no-repeat center center url(../../wp-content/themes/casar_na_ilha/src/images/wedding.jpg); background-size: 100%;">
-    <div class="center main-slider__content">
-        <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos amet facilis natus, fugit deserunt molestiae soluta dolores magnam eaque nisi fugiat, temporibus quos, perferendis placeat recusandae mollitia ad delectus?</div>
-        <a class="btn" href="#" title="Saiba mais">Saiba mais!</a>  
+<section class="swiper main-slider main-slider__controller">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background: fixed no-repeat center center url(../../wp-content/themes/casar_na_ilha/src/images/wedding.jpg); background-size: 100%;">
+            <div class="center main-slider__content">
+                <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos amet facilis natus, fugit deserunt molestiae soluta dolores magnam eaque nisi fugiat, temporibus quos, perferendis placeat recusandae mollitia ad delectus?
+                </div>
+                <a class="btn" href="#" title="Saiba mais">Saiba mais!</a>  
+            </div>
+        </div>
     </div>
 </section>
 
