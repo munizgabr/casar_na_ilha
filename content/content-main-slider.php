@@ -1,7 +1,6 @@
 <?php
 // Obtém o valor do campo repetidor
 $slider = get_field('slider');
-var_dump($slider);
 
 // Verifica se existem subcampos no campo repetidor
 if ($slider) {?>
@@ -19,7 +18,7 @@ if ($slider) {?>
                 <div class="swiper-slide" style="background: fixed no-repeat center center url(<?php echo $image['desktop_image'];?>); background-size: 100%;">
                     <div class="center main-slider__content">
                         <div class="description">
-                            <?php echo apply_filters('the_content', $description);?>
+                            <?php echo strip_tags($description);?>
                         </div>
                         <a class="btn" href="<?php echo $button['link'];?>" title="<?php echo $button['text'];?>" target="_blank"><?php echo $button['text'];?></a>  
                     </div>
