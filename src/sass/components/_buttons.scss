@@ -1,17 +1,17 @@
 @import "avariables";
 
 .btn {
-
-	border-radius: 30px;
-	display: inline-block;
-	padding: 15px 30px;
-	font-weight: 800;
-	text-align: center;
-
-	&:hover {
-
-		text-decoration: none;
-	}
+    justify-self: end;
+    font-size: 1em;
+    background-color: #B48B3C;
+    padding: 20px 20px;
+    border-radius: 6px;
+    color: white;
+    &:hover {
+        background-color: darken($color: #B48B3C, $amount: 15%);
+        color: white;
+        text-decoration: none;
+    }
 }
 
 .btn--orange {
@@ -33,6 +33,14 @@
 	font-weight: bold;
 	font-size: 1.8em;
 	padding: 10px 30px;
+}
+
+@media screen and (max-width: 680px) {
+
+	.btn {
+		padding: 10px;
+		justify-self: center;
+	}
 }
 
 @media screen and (max-width: 580px) {

@@ -41,13 +41,8 @@ function soma_enqueue_scripts_input(){
 
 }
 
-function soma_activate_scripts(){ 
-
-  
-    wp_enqueue_script( 'modal', get_template_directory_uri() . "/build/js/" . "components/modal.js", array(), '' );
-  
-
-  ?><script>
+function soma_activate_scripts(){ ?>
+<script>
 
     var wow = new WOW({
         boxClass:     'wow',      // animated element css class (default is wow)
