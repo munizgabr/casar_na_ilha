@@ -8,7 +8,6 @@
 @import "./components/grid";
 @import "./components/buttons";
 @import "./components/animate";
-@import "./components/modal";
 @import "./components/main-slider";
 @import "./components/gallery";
 @import "./components/search";
@@ -24,20 +23,6 @@ body {
 
     visibility: hidden;
 }
-.btn {
-    justify-self: end;
-    font-size: 1em;
-    background-color: #B48B3C;
-    padding: 20px 20px;
-    border-radius: 6px;
-    color: white;
-    &:hover {
-        background-color: darken($color: #B48B3C, $amount: 15%);
-        color: white;
-        text-decoration: none;
-    }
-}
 @media screen and (max-width: 1185px) {
 	
-
 }

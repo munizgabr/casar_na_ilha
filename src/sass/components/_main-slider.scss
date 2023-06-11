@@ -21,3 +21,14 @@
         }
     }
 }
+
+@media screen and (max-width: 680px)  {
+    .main-slider {
+        .main-slider__content {
+            grid-template-columns: 1fr;
+            .description {
+                font-size: 1.2em;
+            }
+        }
+    }
+}
