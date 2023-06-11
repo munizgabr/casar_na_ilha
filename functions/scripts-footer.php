@@ -18,7 +18,7 @@ function soma_enqueue_scripts_input(){
 
   // JS
   foreach ($js['js_global'] as $item) {
-    wp_enqueue_script( $item, get_template_directory_uri() . "/srcgit /js/" . "$item.js", array(), bytebloom_VERSION );
+    wp_enqueue_script( $item, get_template_directory_uri() . "/build/js/" . "$item.js", array(), bytebloom_VERSION );
     wp_enqueue_script('wow', get_template_directory_uri().'/build/js/wow.min.js', array(), bytebloom_VERSION);
   }
 

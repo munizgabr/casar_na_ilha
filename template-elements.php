@@ -17,7 +17,8 @@ get_header();?>
 							get_template_part( 'content/content', $component );
 						endif;
 					}, [
-						'main-slider'
+						'main-slider',
+						'partners'
 					]);
 				endwhile;
 				else :
