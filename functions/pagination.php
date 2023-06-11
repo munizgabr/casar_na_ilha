@@ -34,8 +34,8 @@ function pagination() {
     'current'  => $paged,
     'mid_size' => 3,
     'add_args' => array_map( 'urlencode', $query_args ),
-    'prev_text' => __( '<span class="title-left">‹</span>', 'bytebloom' ),
-    'next_text' => __( '<span class="title-right">›</span>', 'bytebloom' ),
+    'prev_text' => __( '<span class="title-left">‹</span>', 'somadev' ),
+    'next_text' => __( '<span class="title-right">›</span>', 'somadev' ),
     'type'      => 'list',
   ) );
 
@@ -67,8 +67,8 @@ function paginationQuery($total)
         'current' => $current_page,
         'total' => $total,
         'mid_size' => 2,
-        'prev_text' => __( '<span class="title-left">‹</span>', 'bytebloom' ),
-        'next_text' => __( '<span class="title-right">›</span>', 'bytebloom' ),
+        'prev_text' => __( '<span class="title-left">‹</span>', 'somadev' ),
+        'next_text' => __( '<span class="title-right">›</span>', 'somadev' ),
         'type' => 'list'
       )
     );

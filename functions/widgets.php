@@ -1,22 +1,22 @@
 <?php
 
-add_action( 'widgets_init', 'bytebloom_widgets_init' );
+add_action( 'widgets_init', 'somadev_widgets_init' );
 
-function bytebloom_widgets_init() {
+function somadev_widgets_init() {
 
     register_sidebar ( array (
-        'name' => __( 'Topo Esquerda', 'bytebloom' ),
+        'name' => __( 'Topo Esquerda', 'somadev' ),
         'id' => 'topoesquerda',
-        'description' => __( 'Exibição de conteúdo no topo a esquerda', 'bytebloom' ),
+        'description' => __( 'Exibição de conteúdo no topo a esquerda', 'somadev' ),
         'before_widget' => '',
         'after_widget' => '',
         'before_title' => '',
         'after_title' => '',
     ));
     register_sidebar ( array (
-        'name' => __( 'Sidebar', 'bytebloom' ),
+        'name' => __( 'Sidebar', 'somadev' ),
         'id' => 'sidebar',
-        'description' => __( 'Exibição de conteúdo na sidebar', 'bytebloom' ),
+        'description' => __( 'Exibição de conteúdo na sidebar', 'somadev' ),
         'before_widget' => '',
         'after_widget' => '',
         'before_title' => '<h2 class="widget-title">',
@@ -24,9 +24,9 @@ function bytebloom_widgets_init() {
     ));
 
     register_sidebar ( array (
-        'name' => __( 'Topo Direita', 'bytebloom' ),
+        'name' => __( 'Topo Direita', 'somadev' ),
         'id' => 'topodireita',
-        'description' => __( 'Exibição de conteúdo no topo a direita', 'bytebloom' ),
+        'description' => __( 'Exibição de conteúdo no topo a direita', 'somadev' ),
         'before_widget' => '',
         'after_widget' => '',
         'before_title' => '',
@@ -34,9 +34,9 @@ function bytebloom_widgets_init() {
     ));
 
     register_sidebar ( array (
-        'name' => __( 'Footer 1', 'bytebloom' ),
+        'name' => __( 'Footer 1', 'somadev' ),
         'id' => 'footer1',
-        'description' => __( 'Exibição de conteúdo na coluna 1 do rodapé', 'bytebloom' ),
+        'description' => __( 'Exibição de conteúdo na coluna 1 do rodapé', 'somadev' ),
         'before_widget' => '<div class="widget">',
         'after_widget' => '</div>',
         'before_title' => '<h4>',
@@ -44,9 +44,9 @@ function bytebloom_widgets_init() {
     ));
 
     register_sidebar ( array (
-        'name' => __( 'Footer 2', 'bytebloom' ),
+        'name' => __( 'Footer 2', 'somadev' ),
         'id' => 'footer2',
-        'description' => __( 'Exibição de conteúdo na coluna 2 do rodapé', 'bytebloom' ),
+        'description' => __( 'Exibição de conteúdo na coluna 2 do rodapé', 'somadev' ),
         'before_widget' => '<div class="widget">',
         'after_widget' => '</div>',
         'before_title' => '<h4>',
@@ -54,9 +54,9 @@ function bytebloom_widgets_init() {
     ));
 
     register_sidebar ( array (
-        'name' => __( 'Footer 3', 'bytebloom' ),
+        'name' => __( 'Footer 3', 'somadev' ),
         'id' => 'footer3',
-        'description' => __( 'Exibição de conteúdo na coluna 3 do rodapé', 'bytebloom' ),
+        'description' => __( 'Exibição de conteúdo na coluna 3 do rodapé', 'somadev' ),
         'before_widget' => '<div class="widget">',
         'after_widget' => '</div>',
         'before_title' => '<h4>',
@@ -64,9 +64,9 @@ function bytebloom_widgets_init() {
     ));
 
     register_sidebar ( array (
-        'name' => __( 'Footer 4', 'bytebloom' ),
+        'name' => __( 'Footer 4', 'somadev' ),
         'id' => 'footer4',
-        'description' => __( 'Exibição de conteúdo na coluna 4 do rodapé', 'bytebloom' ),
+        'description' => __( 'Exibição de conteúdo na coluna 4 do rodapé', 'somadev' ),
         'before_widget' => '<div class="widget">',
         'after_widget' => '</div>',
         'before_title' => '<h4>',
@@ -74,9 +74,9 @@ function bytebloom_widgets_init() {
     ));
 
     register_sidebar ( array (
-        'name' => __( 'Search bar', 'bytebloom' ),
+        'name' => __( 'Search bar', 'somadev' ),
         'id' => 'search',
-        'description' => __( 'Exibição de barra de pesquisa na home', 'bytebloom' ),
+        'description' => __( 'Exibição de barra de pesquisa na home', 'somadev' ),
         'before_widget' => '<div class="widget searchbar">',
         'after_widget' => '</div>',
         'before_title' => '<h4>',

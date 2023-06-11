@@ -15,9 +15,6 @@ require(get_template_directory() . '/functions/scripts-footer.php');
 require(get_template_directory() . '/functions/login-style.php' );
 require(get_template_directory() . '/functions/pagination.php' );
 
-//acf
-require(get_template_directory() . '/functions/acf/elements.php' );
-
 //Custom Posts
 require(get_template_directory() . '/functions/customPosts/fornecedores.php' );
 

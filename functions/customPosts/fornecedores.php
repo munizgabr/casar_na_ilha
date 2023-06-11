@@ -4,16 +4,16 @@ add_action('init', 'fornecedor_register_init');
 
 function fornecedor_register_init() {
     $labels = array(
-        'name' => _x( 'Fornecedores', 'post type general name', 'bytebloom' ),
-        'singular_name' => _x( 'Fornecedor', 'post type singular name', 'bytebloom' ),
-        'add_new' => _x( 'Adicionar novo', 'fornecedor entry', 'bytebloom' ),
-        'add_new_item' => __('Adicionar novo fornecedor', 'bytebloom' ),
-        'edit_item' => __( 'Editar fornecedor', 'bytebloom' ),
-        'new_item' => __( 'Novo fornecedor', 'bytebloom' ),
-        'view_item' => __( 'Visualizar fornecedor', 'bytebloom' ),
-        'search_items' => __( 'Procurar fornecedores', 'bytebloom' ),
-        'not_found' =>  __( 'Nenhum fornecedor encontrado', 'bytebloom' ),
-        'not_found_in_trash' => __( 'Nenhum fornecedor foi encontrado na lixeira', 'bytebloom' ),
+        'name' => _x( 'Fornecedores', 'post type general name', 'somadev' ),
+        'singular_name' => _x( 'Fornecedor', 'post type singular name', 'somadev' ),
+        'add_new' => _x( 'Adicionar novo', 'fornecedor entry', 'somadev' ),
+        'add_new_item' => __('Adicionar novo fornecedor', 'somadev' ),
+        'edit_item' => __( 'Editar fornecedor', 'somadev' ),
+        'new_item' => __( 'Novo fornecedor', 'somadev' ),
+        'view_item' => __( 'Visualizar fornecedor', 'somadev' ),
+        'search_items' => __( 'Procurar fornecedores', 'somadev' ),
+        'not_found' =>  __( 'Nenhum fornecedor encontrado', 'somadev' ),
+        'not_found_in_trash' => __( 'Nenhum fornecedor foi encontrado na lixeira', 'somadev' ),
         'parent_item_colon' => ''
     );
 

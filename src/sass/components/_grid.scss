@@ -11,7 +11,9 @@
 
 .wrapper-grid {
 	padding: 45px;
-	overflow: hidden;
+	.wrapper-grid__controller {
+		overflow: hidden;
+	}
 	.wrapper-grid__cta {
 		text-align: center;
 		padding: 200px 0;
