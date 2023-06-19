@@ -61,7 +61,7 @@
 }
 .sidebar {
     padding: 15px;
-    border: 0.5px solid #808b8b;
+    border: 0.5px solid #464949;
     border-radius: 8px;
     box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
     .widget-title {
@@ -74,9 +74,9 @@
         }
     }
     a {
-        color: #808b8b;
+        color: #464949;
         &:hover {
-            color: darken($color: #808b8b, $amount: 15%);
+            color: darken($color: #464949, $amount: 15%);
             text-decoration: none;
         }
     }
@@ -86,6 +86,6 @@
     box-sizing: border-box;
     padding-inline: 0.5em;
     padding-block: 0.7em;
-    border: 0.5px solid #808b8b;
+    border: 0.5px solid #464949;
     }
 }
