@@ -154,25 +154,16 @@ function soma_activate_scripts(){ ?>
   //     },
   //   });
 
-  //   var main_swiper = new Swiper(".main-slider", {
-  //     slidesPerView: 'auto',
-  // spaceBetween: 16,
-  // centeredSlides: true,
-  // loop: true,
-  // navigation: {
-  //   nextEl: '.swiper-button-next',
-  //   prevEl: '.swiper-button-prev',
-  // },
-  //   });
-  var swiper = new Swiper('.swiper-container', {
-    loop: false, // Desliga o loop
-    slidesPerView: 'auto', // Define o número de slides visíveis
-    spaceBetween: 16, // Espaçamento entre os slides
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-      },
-  });
+    var main_swiper = new Swiper(".main-slider", {
+      slidesPerView: 'auto',
+  spaceBetween: 16,
+  centeredSlides: true,
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+    });
 
 </script>
 
