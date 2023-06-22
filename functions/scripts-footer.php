@@ -156,14 +156,34 @@ function soma_activate_scripts(){ ?>
 
     var main_swiper = new Swiper(".main-slider", {
       slidesPerView: 'auto',
-  spaceBetween: 16,
-  centeredSlides: true,
-  loop: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+      spaceBetween: 16,
+      centeredSlides: true,
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     });
+    var swiper = new Swiper('.swiper-highlights', {
+      slidesPerView: '2',
+      spaceBetween: 10,
+      autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+      },
+      breakpoints: {
+        680: {
+          slidesPerView: 3,
+        },
+        720: {
+          slidesPerView: 4,
+        },
+        1000: {
+          slidesPerView: 5,
+        }
+      },
+    });
+
 
 </script>
 
