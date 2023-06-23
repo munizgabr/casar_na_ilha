@@ -70,6 +70,64 @@ get_header();?>
   </div>
 </section>
 
+<!-- Categories -->
+<section class="swiper-category relative p-x4 pb-4">
+  <div class="swiper-wrapper p-4">
+      <div class="swiper-slide rounded-lg overflow-hidden">
+        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
+      </div>
+      <div class="swiper-slide rounded-lg overflow-hidden">
+        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
+      </div>
+      <div class="swiper-slide rounded-lg overflow-hidden">
+        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
+      </div>
+      <div class="swiper-slide rounded-lg overflow-hidden">
+        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
+      </div>
+      <div class="swiper-slide rounded-lg overflow-hidden">
+        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
+      </div>
+      <div class="swiper-slide rounded-lg overflow-hidden">
+        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
+      </div>
+      <div class="swiper-slide rounded-lg overflow-hidden">
+        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
+      </div>
+      <div class="swiper-slide rounded-lg overflow-hidden">
+        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
+      </div>
+      <div class="swiper-slide rounded-lg overflow-hidden">
+        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
+      </div>
+      <div class="swiper-slide rounded-lg overflow-hidden">
+        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
+      </div>
+      <div class="swiper-slide rounded-lg overflow-hidden">
+        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
+      </div>
+      <div class="swiper-slide rounded-lg overflow-hidden">
+        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
+      </div>
+      <div class="swiper-slide rounded-lg overflow-hidden">
+        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
+      </div>
+      <div class="swiper-slide rounded-lg overflow-hidden">
+        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
+      </div>
+      <!-- Adicione mais 19 slides com a mesma estrutura -->
+    </div>
+  </div>
+  <!-- Setas de navegação -->
+  <div class="swiper-button-prev swiper-button-prev-category bottom-0 ">
+    <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/arrow-left-white.png" alt="Anterior">
+  </div>
+  <div class="swiper-button-next swiper-button-next-category absolute bottom-0">
+    <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/arrow-right-white.png" alt="Próximo">
+  </div>
+</section>
+
+
 
 
 <?php get_footer(); ?>

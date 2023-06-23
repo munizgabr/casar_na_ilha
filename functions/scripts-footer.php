@@ -98,39 +98,39 @@ function soma_activate_scripts(){ ?>
   //   });
 
   //   // SWIPER CATEGORY
-  //   const swiper_category = new Swiper('.category-slider', {
-  //     loop: true,
-  //     slidesPerView: 1,
-  //     spaceBetween: 45,
-  //     autoplay: {
-  //         delay: 5000,
-  //         disableOnInteraction: false,
-  //     },
-  //     paginationClickable: false,
-  //     pagination: {
-  //         el: '.swiper-pagination', 
-  //         clickable: true,
-  //     },
-  //     navigation: {
-  //         nextEl: '.swiper-button-next-category',
-  //         prevEl: '.swiper-button-prev-category',
-  //     },
-  //     breakpoints: {
-  //     // define diferentes opções para diferentes larguras de tela
-  //     768: {
-  //       slidesPerView: 2,
-  //       spaceBetween: 25,
-  //     },
-  //     1024: {
-  //       slidesPerView: 3,
-  //       spaceBetween: 35,
-  //     },
-  //     1280: {
-  //       slidesPerView: 4,
-  //       spaceBetween: 45,
-  //     }
-  //   }
-  //   });
+    const swiper_category = new Swiper('.swiper-category', {
+      loop: true,
+      slidesPerView: 2,
+      spaceBetween: 45,
+      autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+      },
+      paginationClickable: false,
+      pagination: {
+          el: '.swiper-pagination', 
+          clickable: true,
+      },
+      navigation: {
+          nextEl: '.swiper-button-next-category',
+          prevEl: '.swiper-button-prev-category',
+      },
+      breakpoints: {
+      // define diferentes opções para diferentes larguras de tela
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 25,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 35,
+      },
+      1280: {
+        slidesPerView: 5,
+        spaceBetween: 45,
+      }
+    }
+    });
 
   //   var swiper = new Swiper(".mySwiper", {
   //     effect: "coverflow",
@@ -164,6 +164,7 @@ function soma_activate_scripts(){ ?>
         prevEl: '.swiper-button-prev',
       },
     });
+
     var swiper = new Swiper('.swiper-highlights', {
       slidesPerView: '2',
       spaceBetween: 10,
