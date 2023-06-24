@@ -101,7 +101,7 @@ function soma_activate_scripts(){ ?>
     const swiper_category = new Swiper('.swiper-category', {
       loop: true,
       slidesPerView: 2,
-      spaceBetween: 45,
+      spaceBetween: 25,
       autoplay: {
           delay: 5000,
           disableOnInteraction: false,
@@ -184,6 +184,8 @@ function soma_activate_scripts(){ ?>
         }
       },
     });
+
+
 
 
 </script>

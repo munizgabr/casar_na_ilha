@@ -24,9 +24,9 @@ get_header();?>
     <h2 class="font-bold text0black text-xl">Empresas em destaque</h2>
     <img src="<?php bloginfo('template_url');?>/src/images/fornecedor-premium.png" alt="Fornecedores premium">
   </div>
-  <div class="swiper-highlights pb-4 px-4 overflow-hidden">
+  <div class="z-[-1] swiper-highlights pb-4 px-4 overflow-hidden">
     <div class="swiper-wrapper">
-      <div class="swiper-slide shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg overflow-hidden">
+      <a href="#" title="premium" class="swiper-slide shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg overflow-hidden group-hover:no-underline">
         <img src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
         <div class="p-4">
           <span class="text-lg text-black font-bold">Empresa</span>
@@ -35,8 +35,8 @@ get_header();?>
             <img src="<?php bloginfo('template_url');?>/src/images/coin.png" alt="Custo"> A partir de R$1000,00
           </div>
         </div>
-      </div>
-      <div class="swiper-slide shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg overflow-hidden">
+      </a>
+      <a href="#" title="premium" class="swiper-slide shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg overflow-hidden group-hover:no-underline">
         <img src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
         <div class="p-4">
           <span class="text-lg text-black font-bold">Empresa</span>
@@ -45,8 +45,8 @@ get_header();?>
             <img src="<?php bloginfo('template_url');?>/src/images/coin.png" alt="Custo"> A partir de R$1000,00
           </div>
         </div>
-      </div>
-      <div class="swiper-slide shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg overflow-hidden">
+      </a>
+      <a href="#" title="premium" class="swiper-slide shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg overflow-hidden group-hover:no-underline">
         <img src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
         <div class="p-4">
           <span class="text-lg text-black font-bold">Empresa</span>
@@ -55,8 +55,8 @@ get_header();?>
             <img src="<?php bloginfo('template_url');?>/src/images/coin.png" alt="Custo"> A partir de R$1000,00
           </div>
         </div>
-      </div>
-      <div class="swiper-slide shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg overflow-hidden">
+      </a>
+      <a href="#" title="premium" class="swiper-slide shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg overflow-hidden group-hover:no-underline">
         <img src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
         <div class="p-4">
           <span class="text-lg text-black font-bold">Empresa</span>
@@ -65,65 +65,62 @@ get_header();?>
             <img src="<?php bloginfo('template_url');?>/src/images/coin.png" alt="Custo"> A partir de R$1000,00
           </div>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
 
 <!-- Categories -->
-<section class="swiper-category relative p-x4 pb-4">
+<section class="z-[-1] swiper-category relative py-4 px-8 mb-4 bg-black overflow-hidden">
+  <div class="w-full flex items-center place-content-between">
+    <span class="uppercase text-white font-extrabold">Categoria</span>
+    <a class="text-white font-semibold border border-white px-4 py-2 hover:text-black hover:bg-white hover:no-underline" href="#" title="Ver todos">Ver todos</a>
+  </div>
   <div class="swiper-wrapper p-4">
-      <div class="swiper-slide rounded-lg overflow-hidden">
+      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
         <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </div>
-      <div class="swiper-slide rounded-lg overflow-hidden">
+      </a>
+      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
         <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </div>
-      <div class="swiper-slide rounded-lg overflow-hidden">
+      </a>
+      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
         <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </div>
-      <div class="swiper-slide rounded-lg overflow-hidden">
+      </a>
+      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
         <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </div>
-      <div class="swiper-slide rounded-lg overflow-hidden">
+      </a>
+      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
         <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </div>
-      <div class="swiper-slide rounded-lg overflow-hidden">
+      </a>
+      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
         <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </div>
-      <div class="swiper-slide rounded-lg overflow-hidden">
+      </a>
+      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
         <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </div>
-      <div class="swiper-slide rounded-lg overflow-hidden">
+      </a>
+      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
         <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </div>
-      <div class="swiper-slide rounded-lg overflow-hidden">
+      </a>
+      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
         <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </div>
-      <div class="swiper-slide rounded-lg overflow-hidden">
+      </a>
+      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
         <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </div>
-      <div class="swiper-slide rounded-lg overflow-hidden">
+      </a>
+      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
         <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </div>
-      <div class="swiper-slide rounded-lg overflow-hidden">
+      </a>
+      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
         <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </div>
-      <div class="swiper-slide rounded-lg overflow-hidden">
+      </a>
+      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
         <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </div>
-      <div class="swiper-slide rounded-lg overflow-hidden">
+      </a>
+      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
         <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </div>
+      </a>
       <!-- Adicione mais 19 slides com a mesma estrutura -->
     </div>
-  </div>
-  <!-- Setas de navegação -->
-  <div class="swiper-button-prev swiper-button-prev-category bottom-0 ">
-    <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/arrow-left-white.png" alt="Anterior">
-  </div>
-  <div class="swiper-button-next swiper-button-next-category absolute bottom-0">
-    <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/arrow-right-white.png" alt="Próximo">
   </div>
 </section>
 

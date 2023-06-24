@@ -1,3 +1,9 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@layer base {
+    .fornecedores {
+        @apply rounded-lg overflow-hidden hover:scale-[1.025] hover:opacity-40 ease-in duration-300;
+    }
+}
