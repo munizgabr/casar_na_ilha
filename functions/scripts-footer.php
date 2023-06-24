@@ -184,10 +184,6 @@ function soma_activate_scripts(){ ?>
         }
       },
     });
-
-
-
-
 </script>
 
 <?php

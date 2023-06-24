@@ -7,7 +7,7 @@
 get_header();?>
 
 <!-- slider -->
-<section class="h-auto relative pb-4 z-[-1]">
+<section class="h-auto relative pb-4 ">
     <div class="h-[55vh]" style="background-image: url(../../wp-content/themes/casar_na_ilha/src/images/wedding.jpg);background-size:auto;">
       <div class="center grid grid-cols-1 sm:grid-cols-2 h-full items-center text-md">
         <div class="description font-bold text-white text-center">
@@ -24,12 +24,12 @@ get_header();?>
     <h2 class="font-bold text0black text-xl">Empresas em destaque</h2>
     <img src="<?php bloginfo('template_url');?>/src/images/fornecedor-premium.png" alt="Fornecedores premium">
   </div>
-  <div class="z-[-1] swiper-highlights pb-4 px-4 overflow-hidden">
+  <div class=" swiper-highlights pb-4 px-4 overflow-hidden">
     <div class="swiper-wrapper">
       <a href="#" title="premium" class="swiper-slide shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg overflow-hidden group-hover:no-underline">
         <img src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
         <div class="p-4">
-          <span class="text-lg text-black font-bold">Empresa</span>
+          <span class="text-lg text-[#001C30] font-bold">Empresa</span>
           <div>4* Bairro, Cidade</div>
           <div class="grid grid-cols-[20px_auto] gap-2">
             <img src="<?php bloginfo('template_url');?>/src/images/coin.png" alt="Custo"> A partir de R$1000,00
@@ -39,7 +39,7 @@ get_header();?>
       <a href="#" title="premium" class="swiper-slide shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg overflow-hidden group-hover:no-underline">
         <img src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
         <div class="p-4">
-          <span class="text-lg text-black font-bold">Empresa</span>
+          <span class="text-lg text-[#001C30] font-bold">Empresa</span>
           <div>4* Bairro, Cidade</div>
           <div class="grid grid-cols-[20px_auto] gap-2">
             <img src="<?php bloginfo('template_url');?>/src/images/coin.png" alt="Custo"> A partir de R$1000,00
@@ -49,7 +49,7 @@ get_header();?>
       <a href="#" title="premium" class="swiper-slide shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg overflow-hidden group-hover:no-underline">
         <img src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
         <div class="p-4">
-          <span class="text-lg text-black font-bold">Empresa</span>
+          <span class="text-lg text-[#001C30] font-bold">Empresa</span>
           <div>4* Bairro, Cidade</div>
           <div class="grid grid-cols-[20px_auto] gap-2">
             <img src="<?php bloginfo('template_url');?>/src/images/coin.png" alt="Custo"> A partir de R$1000,00
@@ -59,7 +59,7 @@ get_header();?>
       <a href="#" title="premium" class="swiper-slide shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg overflow-hidden group-hover:no-underline">
         <img src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
         <div class="p-4">
-          <span class="text-lg text-black font-bold">Empresa</span>
+          <span class="text-lg text-[#001C30] font-bold">Empresa</span>
           <div>4* Bairro, Cidade</div>
           <div class="grid grid-cols-[20px_auto] gap-2">
             <img src="<?php bloginfo('template_url');?>/src/images/coin.png" alt="Custo"> A partir de R$1000,00
@@ -71,10 +71,10 @@ get_header();?>
 </section>
 
 <!-- Categories -->
-<section class="z-[-1] swiper-category relative py-4 px-8 mb-4 bg-black overflow-hidden">
+<section class=" swiper-category relative py-4 px-8 mb-4 bg-[#001C30] overflow-hidden">
   <div class="w-full flex items-center place-content-between">
     <span class="uppercase text-white font-extrabold">Categoria</span>
-    <a class="text-white font-semibold border border-white px-4 py-2 hover:text-black hover:bg-white hover:no-underline" href="#" title="Ver todos">Ver todos</a>
+    <a class="text-white font-semibold border border-white px-4 py-2 hover:text-[#001C30] hover:bg-white hover:no-underline" href="#" title="Ver todos">Ver todos</a>
   </div>
   <div class="swiper-wrapper p-4">
       <a href="#" title="fornecedor" class="swiper-slide fornecedores">
