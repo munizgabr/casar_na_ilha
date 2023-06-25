@@ -83,6 +83,14 @@ get_header();
   </div>
 </section>
 <!-- Blog posts -->
+<section class="p-4 bg-gradient-to-b from-[#176B87] to-[#001C30]">
+  <div class="center grid grid-cols-3 grid-rows-3 border gap-3 border-black bg-white rounded-lg items-center justify-center text-center">
+    <a href="#" class="principal row-start-1 row-end-3 col-start-1 col-end-4 font-semibold text-black text-xl">ULTIMO POST</a>
+    <a href="" class="secundario font-semibold text-black text-lg">RECENTES</a>
+    <a href="" class="secundario font-semibold text-black text-lg">RECENTES</a>
+    <a href="" class="secundario font-semibold text-black text-lg">RECENTES</a>
+  </div>
+</section>
 <!-- Categories -->
 <?php
 $terms = get_terms('tipo');
