@@ -4,127 +4,125 @@
  * @package SOMA Dev
  * @since 0.0.1
  */
-get_header();?>
+get_header();
+?>
 
-<!-- slider -->
-<section class="h-auto relative pb-4 ">
-    <div class="h-[55vh]" style="background-image: url(../../wp-content/themes/casar_na_ilha/src/images/wedding.jpg);background-size:auto;">
-      <div class="center grid grid-cols-1 sm:grid-cols-2 h-full items-center text-md">
-        <div class="description font-bold text-white text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos amet facilis natus, fugit deserunt molestiae soluta dolores magnam eaque nisi fugiat, temporibus quos, perferendis placeat recusandae mollitia ad delectus?
+<!-- Slider -->
+<section class="main-slider overflow-hidden h-auto relative pb-4">
+  <div class="swiper-wrapper">
+    <?php
+    $slider_posts = get_posts(array(
+      'post_type' => 'fornecedor',
+      'orderby' => 'name',
+      'order' => 'DESC'
+    ));
+
+    foreach ($slider_posts as $post) :
+      setup_postdata($post);
+      $adsType = get_field('advertising-type');
+      $thumb = get_the_post_thumbnail_url(get_the_ID(), 'thumb_banner');
+      if (in_array('Banner principal', $adsType)) :
+    ?>
+        <div class="swiper-slide h-[55vh]" style="background-image: url(<?php echo !empty($thumb) ? $thumb : get_template_directory_uri() . '/src/images/wedding.jpg' ?>);background-size:100%;">
+          <div class="center grid grid-cols-1 sm:grid-cols-2 h-full items-center text-md">
+            <div class="description font-bold text-white text-center">
+              <?php echo wp_trim_words(get_the_content(), 30, '...'); ?>
+            </div>
+            <a class="btn font-bold" href="<?php the_permalink(); ?>" title="Saiba mais sobre <?php the_title(); ?>">Saiba mais!</a>
+          </div>
         </div>
-        <a class="btn font-bold" href="#" title="Saiba mais">Saiba mais!</a>
-      </div>
-    </div>
+    <?php
+      endif;
+    endforeach;
+    wp_reset_postdata();
+    ?>
+  </div>
 </section>
+
 
 <!-- Highlights -->
 <section class="grid grid-cols-1 items-center">
-  <div class="flex flex-row place-content-between pb-4 px-4 items-center">
+  <div class="flex flex-row place-content-between p-4 items-center">
     <h2 class="font-bold text0black text-xl">Empresas em destaque</h2>
-    <img src="<?php bloginfo('template_url');?>/src/images/fornecedor-premium.png" alt="Fornecedores premium">
+    <img src="<?php echo get_template_directory_uri(); ?>/src/images/fornecedor-premium.png" alt="Fornecedores premium">
   </div>
-  <div class=" swiper-highlights pb-4 px-4 overflow-hidden">
+  <div class="swiper-highlights pb-4 px-4 overflow-hidden">
     <div class="swiper-wrapper">
-      <a href="#" title="premium" class="swiper-slide shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg overflow-hidden group-hover:no-underline">
-        <img src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-        <div class="p-4">
-          <span class="text-lg text-[#001C30] font-bold">Empresa</span>
-          <div>4* Bairro, Cidade</div>
-          <div class="grid grid-cols-[20px_auto] gap-2">
-            <img src="<?php bloginfo('template_url');?>/src/images/coin.png" alt="Custo"> A partir de R$1000,00
-          </div>
-        </div>
-      </a>
-      <a href="#" title="premium" class="swiper-slide shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg overflow-hidden group-hover:no-underline">
-        <img src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-        <div class="p-4">
-          <span class="text-lg text-[#001C30] font-bold">Empresa</span>
-          <div>4* Bairro, Cidade</div>
-          <div class="grid grid-cols-[20px_auto] gap-2">
-            <img src="<?php bloginfo('template_url');?>/src/images/coin.png" alt="Custo"> A partir de R$1000,00
-          </div>
-        </div>
-      </a>
-      <a href="#" title="premium" class="swiper-slide shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg overflow-hidden group-hover:no-underline">
-        <img src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-        <div class="p-4">
-          <span class="text-lg text-[#001C30] font-bold">Empresa</span>
-          <div>4* Bairro, Cidade</div>
-          <div class="grid grid-cols-[20px_auto] gap-2">
-            <img src="<?php bloginfo('template_url');?>/src/images/coin.png" alt="Custo"> A partir de R$1000,00
-          </div>
-        </div>
-      </a>
-      <a href="#" title="premium" class="swiper-slide shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg overflow-hidden group-hover:no-underline">
-        <img src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-        <div class="p-4">
-          <span class="text-lg text-[#001C30] font-bold">Empresa</span>
-          <div>4* Bairro, Cidade</div>
-          <div class="grid grid-cols-[20px_auto] gap-2">
-            <img src="<?php bloginfo('template_url');?>/src/images/coin.png" alt="Custo"> A partir de R$1000,00
-          </div>
-        </div>
-      </a>
+      <?php
+      $highlight_posts = get_posts(array(
+        'post_type' => 'fornecedor',
+      ));
+
+      foreach ($highlight_posts as $post) :
+        setup_postdata($post);
+        $adsType = get_field('advertising-type');
+        if (in_array('Fornecedor destaque', $adsType)) :
+          $value = get_field('value');
+          $local = get_field('local');
+          $city = $local['city'];
+          $neighborhood = $local['neighborhood'];
+          $location = $neighborhood . ', ' . $city;
+          $thumbnail = get_the_post_thumbnail_url(get_the_ID(), 'thumb_1');
+      ?>
+          <a href="<?php the_permalink(); ?>" title="premium" class="swiper-slide shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg overflow-hidden group-hover:no-underline">
+            <img src="<?php echo !empty($thumbnail) ? $thumbnail : get_template_directory_uri() . '/src/images/ensaio.jpg'; ?>" alt="<?php the_title(); ?>">
+            <div class="p-4">
+              <span class="text-lg text-[#001C30] font-bold"><?php the_title(); ?></span>
+              <div>4* <?php echo !empty($location) ? $location : "Bairro, Cidade"; ?></div>
+              <div class="grid grid-cols-[20px_auto] gap-2">
+                <img src="<?php echo get_template_directory_uri(); ?>/src/images/coin.png" alt="Custo"> <?php echo $value; ?>
+              </div>
+            </div>
+          </a>
+      <?php
+        endif;
+      endforeach;
+      wp_reset_postdata();
+      ?>
     </div>
   </div>
 </section>
-
+<!-- Blog posts -->
 <!-- Categories -->
-<section class=" swiper-category relative py-4 px-8 mb-4 bg-[#001C30] overflow-hidden">
-  <div class="w-full flex items-center place-content-between">
-    <span class="uppercase text-white font-extrabold">Categoria</span>
-    <a class="text-white font-semibold border border-white px-4 py-2 hover:text-[#001C30] hover:bg-white hover:no-underline" href="#" title="Ver todos">Ver todos</a>
-  </div>
-  <div class="swiper-wrapper p-4">
-      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
-        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </a>
-      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
-        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </a>
-      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
-        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </a>
-      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
-        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </a>
-      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
-        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </a>
-      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
-        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </a>
-      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
-        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </a>
-      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
-        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </a>
-      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
-        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </a>
-      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
-        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </a>
-      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
-        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </a>
-      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
-        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </a>
-      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
-        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </a>
-      <a href="#" title="fornecedor" class="swiper-slide fornecedores">
-        <img class="h-full w-full" src="<?php bloginfo('template_url');?>/src/images/carro-antigo.jpeg" alt="Carro">
-      </a>
-      <!-- Adicione mais 19 slides com a mesma estrutura -->
+<?php
+$terms = get_terms('tipo');
+foreach ($terms as $term) :
+?>
+  <section class="swiper-category relative py-4 px-8 last:mb-4 bg-[#001C30] overflow-hidden">
+    <div class="w-full flex items-center place-content-between">
+      <span class="uppercase text-white font-extrabold"><?php echo $term->name; ?></span>
+      <a class="text-white font-semibold border border-white px-4 py-2 hover:text-[#001C30] hover:bg-white hover:no-underline" href="#" title="Ver todos">Ver todos</a>
     </div>
-  </div>
-</section>
+    <div class="swiper-wrapper p-4">
+      <?php
+      $category_posts = get_posts(array(
+        'post_type' => 'fornecedor',
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'tipo',
+            'field' => 'slug',
+            'terms' => $term->slug,
+          ),
+        ),
+      ));
 
-
-
-
-<?php get_footer(); ?>
+      foreach ($category_posts as $post) :
+        setup_postdata($post);
+        $adsType = get_field('advertising-type');
+        $thumbnailCategory = get_the_post_thumbnail_url(get_the_ID(), 'thumb_1');
+        if (in_array('Destaque da categoria', $adsType)) :
+      ?>
+          <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="swiper-slide fornecedores">
+            <img class="h-full w-full" src="<?php echo !empty($thumbnailCategory) ? $thumbnailCategory : get_template_directory_uri() . '/src/images/ensaio.jpg'; ?>">
+          </a>
+      <?php
+        endif;
+      endforeach;
+      wp_reset_postdata();
+      ?>
+    </div>
+  </section>
+<?php
+endforeach;
+get_footer();
+?>

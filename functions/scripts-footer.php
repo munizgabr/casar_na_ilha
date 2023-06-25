@@ -155,7 +155,7 @@ function soma_activate_scripts(){ ?>
   //   });
 
     var main_swiper = new Swiper(".main-slider", {
-      slidesPerView: 'auto',
+      slidesPerView: '1',
       spaceBetween: 16,
       centeredSlides: true,
       loop: true,
