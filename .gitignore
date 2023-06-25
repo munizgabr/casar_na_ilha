@@ -1,3 +1,4 @@
 # Gulp
 node_modules/
 build/css
+php.intelephense.config.php
