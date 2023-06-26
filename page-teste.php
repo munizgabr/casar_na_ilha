@@ -8,7 +8,7 @@ get_header();
 ?>
 
 <!-- Slider -->
-<section class="main-slider overflow-hidden h-auto relative pb-4">
+<section class="main-slider mt-[80px] sm:mt-[90px] overflow-hidden h-auto relative pb-4">
   <div class="swiper-wrapper">
     <?php
     $slider_posts = get_posts(array(

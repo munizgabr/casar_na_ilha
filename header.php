@@ -25,7 +25,7 @@
 </head>
 	<body <?php body_class(); ?>>
 		<div class="all line">
-			<header class="header content line principal-header">
+			<header class="header content line principal-header fixed">
 				<div class="center-header">
 					<div class="wrapper-header center">
 						<div class="wrapper-logo">
