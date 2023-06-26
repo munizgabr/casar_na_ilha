@@ -41,12 +41,12 @@ get_header();
 
 
 <!-- Highlights -->
-<section class="grid grid-cols-1 items-center">
-  <div class="flex flex-row place-content-between p-4 items-center">
+<section class="grid grid-cols-1 items-center bg-gradient-to-b from-white via-[#64CCC5] to-[#176B87]">
+  <div class="center flex flex-row place-content-between p-4 items-center">
     <h2 class="font-bold text0black text-xl">Empresas em destaque</h2>
     <img src="<?php echo get_template_directory_uri(); ?>/src/images/fornecedor-premium.png" alt="Fornecedores premium">
   </div>
-  <div class="swiper-highlights pb-4 px-4 overflow-hidden">
+  <div class="center swiper-highlights pb-4 overflow-hidden">
     <div class="swiper-wrapper">
       <?php
       $highlight_posts = get_posts(array(
@@ -64,7 +64,7 @@ get_header();
           $location = $neighborhood . ', ' . $city;
           $thumbnail = get_the_post_thumbnail_url(get_the_ID(), 'thumb_1');
       ?>
-          <a href="<?php the_permalink(); ?>" title="premium" class="swiper-slide shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg overflow-hidden group-hover:no-underline">
+          <a href="<?php the_permalink(); ?>" title="<?php echo 'Visitar '.get_the_title();?>" class="swiper-slide shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-white rounded-lg overflow-hidden group-hover:no-underline hover:shadow-[0_3px_10px_rgb(0,0,0,0.5)] ease-in duration-300">
             <img src="<?php echo !empty($thumbnail) ? $thumbnail : get_template_directory_uri() . '/src/images/ensaio.jpg'; ?>" alt="<?php the_title(); ?>">
             <div class="p-4">
               <span class="text-lg text-[#001C30] font-bold"><?php the_title(); ?></span>
@@ -95,6 +95,7 @@ get_header();
 <?php
 $terms = get_terms('tipo');
 foreach ($terms as $term) :
+  if(!empty($term)) :
 ?>
   <section class="swiper-category relative py-4 px-8 last:mb-4 bg-[#001C30] overflow-hidden">
     <div class="w-full flex items-center place-content-between">
@@ -130,7 +131,7 @@ foreach ($terms as $term) :
       ?>
     </div>
   </section>
-<?php
+<?php endif;
 endforeach;
 get_footer();
 ?>
