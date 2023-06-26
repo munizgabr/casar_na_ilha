@@ -84,11 +84,36 @@ get_header();
 </section>
 <!-- Blog posts -->
 <section class="p-4 bg-gradient-to-b from-[#176B87] to-[#001C30]">
-  <div class="center grid grid-cols-3 grid-rows-3 border gap-3 border-black bg-white rounded-lg items-center justify-center text-center">
-    <a href="#" class="principal row-start-1 row-end-3 col-start-1 col-end-4 font-semibold text-black text-xl">ULTIMO POST</a>
-    <a href="" class="secundario font-semibold text-black text-lg">RECENTES</a>
-    <a href="" class="secundario font-semibold text-black text-lg">RECENTES</a>
-    <a href="" class="secundario font-semibold text-black text-lg">RECENTES</a>
+  <span class="uppercase text-lg text-center text-white my-4 font-bold block">Últimas notícias</span>
+  <div class="center p-4 grid grid-cols-3 grid-rows-3 border gap-3 border-black bg-white rounded-lg items-center justify-center text-center">
+    <a href="#" class="principal grid grid-cols-2  row-start-1 row-end-3 col-start-1 col-end-4 font-semibold text-black text-xl" title="teste">
+      <img src="<?php bloginfo('template_url');?>/src/images/ensaio.jpg" alt="teste">
+      <div class="w-full p-4 bg-[#ffffff69]">
+        <span class="font-bold text-black">titulo da materia</span>
+        <p class="opacity-[100%] text-black text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ipsum ad earum vel. Impedit maiores, odio voluptatibus quis autem tempora quisquam ducimus, libero atque laboriosam au.</p>
+      </div>
+    </a>
+    <a href="" class="secundario font-semibold text-black text-lg relative">
+      <img src="<?php bloginfo('template_url');?>/src/images/ensaio.jpg" alt="ensaio">
+      <div class="absolute bottom-0 w-full bg-white opacity-75">
+        <span>Título</span>
+        <p class="opacity-[100%]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta ratione cum doloremque fugit.</p>
+      </div>
+    </a>
+    <a href="" class="secundario font-semibold text-black text-lg relative">
+      <img src="<?php bloginfo('template_url');?>/src/images/ensaio.jpg" alt="ensaio">
+      <div class="absolute bottom-0 w-full bg-white opacity-75">
+        <span>Título</span>
+        <p class="opacity-[100%]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta ratione cum doloremque fugit.</p>
+      </div>
+    </a>
+    <a href="" class="secundario font-semibold text-black text-lg relative">
+      <img src="<?php bloginfo('template_url');?>/src/images/ensaio.jpg" alt="ensaio">
+      <div class="absolute bottom-0 w-full bg-white opacity-75">
+        <span>Título</span>
+        <p class="opacity-[100%]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta ratione cum doloremque fugit.</p>
+      </div>
+    </a>
   </div>
 </section>
 <!-- Categories -->
