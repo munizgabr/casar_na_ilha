@@ -64,7 +64,7 @@ get_header();
           $location = $neighborhood . ', ' . $city;
           $thumbnail = get_the_post_thumbnail_url(get_the_ID(), 'thumb_1');
       ?>
-          <a href="<?php the_permalink(); ?>" title="<?php echo 'Visitar '.get_the_title();?>" class="swiper-slide shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-white rounded-lg overflow-hidden group-hover:no-underline hover:shadow-[0_3px_10px_rgb(0,0,0,0.5)] ease-in duration-300">
+          <a href="<?php the_permalink(); ?>" title="<?php echo 'Visitar '.get_the_title();?>" class="swiper-slide shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-white rounded-md overflow-hidden group-hover:no-underline hover:shadow-[0_3px_10px_rgb(0,0,0,0.5)] ease-in duration-300">
             <img src="<?php echo !empty($thumbnail) ? $thumbnail : get_template_directory_uri() . '/src/images/ensaio.jpg'; ?>" alt="<?php the_title(); ?>">
             <div class="p-4">
               <span class="text-lg text-[#001C30] font-bold"><?php the_title(); ?></span>
@@ -86,7 +86,7 @@ get_header();
 <!-- Blog posts -->
 <section class="p-4 bg-gradient-to-b from-[#176B87] to-[#001C30]">
   <span class="uppercase text-lg text-center text-white my-4 font-bold block">Últimas notícias</span>
-  <div class="center p-4 grid grid-cols-3 grid-rows-3 gap-3 bg-[#ffffff66] rounded-lg items-center justify-center text-center">
+  <div class="center p-4 grid grid-cols-3 grid-rows-3 gap-3 bg-[#ffffff66] rounded-md items-center justify-center text-center">
     <?php
     $recent_posts = get_posts(array(
       'post_type' => 'post',
@@ -104,7 +104,7 @@ get_header();
       $last_post_title = get_the_title($last_post);
       $last_post_content = wp_trim_words(get_the_content($last_post), 50, '...');
     ?>
-      <a href="<?php echo get_permalink($last_post); ?>" class="principal h-full grid grid-cols-2 row-start-1 row-end-3 col-start-1 col-end-4" title="<?php echo $last_post_title; ?>">
+      <a href="<?php echo get_permalink($last_post); ?>" class="principal rounded-md overflow-hidden h-full grid grid-cols-2 row-start-1 row-end-3 col-start-1 col-end-4" title="<?php echo $last_post_title; ?>">
         <img class="h-full object-cover" src="<?php echo (!empty($last_post_thumbnail)) ? $last_post_thumbnail : bloginfo('template_url') . '/src/images/ensaio.jpg'; ?>" alt="<?php echo $last_post_title; ?>">
         <div class="w-full p-4 bg-white">
           <span class="font-bold text-lg text-black uppercase"><?php echo $last_post_title; ?></span>
@@ -120,7 +120,7 @@ get_header();
         $post_title = get_the_title($post);
         $post_content = wp_trim_words(get_the_content($post), 10, '...');
     ?>
-        <a href="<?php echo get_permalink($post); ?>" class="secundario h-full font-semibold text-black text-lg relative">
+        <a href="<?php echo get_permalink($post); ?>" class="secundario h-full rounded-md overflow-hidden font-semibold text-black text-lg relative">
           <img class="w-full h-full object-cover" src="<?php echo (!empty($post_thumbnail)) ? $post_thumbnail : bloginfo('template_url') . '/src/images/ensaio.jpg'; ?>" alt="<?php echo $post_title; ?>">
           <div class="absolute bottom-0 w-full bg-[#ffffff66]">
             <span class="font-bold text-lg text-black uppercase"><?php echo $post_title; ?></span>

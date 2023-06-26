@@ -4,6 +4,6 @@
 
 @layer base {
     .fornecedores {
-        @apply rounded-lg overflow-hidden hover:scale-[1.025] hover:opacity-40 ease-in duration-300;
+        @apply rounded-md overflow-hidden hover:scale-[1.025] hover:opacity-40 ease-in duration-300;
     }
 }
