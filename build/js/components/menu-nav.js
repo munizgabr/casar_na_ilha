@@ -5,6 +5,8 @@ $(document).ready(function(){
 		$('.rmm').toggleClass("open");
 		if($(".rmm").hasClass("open")){
 			$(".tap-mobile").addClass("open");
+			$('section').css('z-index', '-1');
+			$('section>div').css('z-index', '-1');
 		} else {
 			$(".tap-mobile").removeClass("open");
 		}

@@ -23,9 +23,9 @@
 	<style>[x-cloak] { display: none !important; }</style>
 	<?php wp_head(); ?>
 </head>
-	<body <?php body_class(); ?>>
+	<body <?php body_class('bg-gradient-to-b from-white via-[#176B87] to-[#001C30]'); ?>>
 		<div class="all line">
-			<header class="header content line principal-header">
+			<header class="header content line principal-header fixed">
 				<div class="center-header">
 					<div class="wrapper-header center">
 						<div class="wrapper-logo">

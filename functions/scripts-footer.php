@@ -83,25 +83,25 @@ function soma_activate_scripts(){ ?>
         });
     });
 
-    const swiper_archive = new Swiper('.archive-slider', {
-      loop: true,
-      slidesPerView: 1,
-      autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-      },
-      paginationClickable: false,
-      pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-      },
-    });
+  //   const swiper_archive = new Swiper('.archive-slider', {
+  //     loop: true,
+  //     slidesPerView: 1,
+  //     autoplay: {
+  //         delay: 5000,
+  //         disableOnInteraction: false,
+  //     },
+  //     paginationClickable: false,
+  //     pagination: {
+  //         el: '.swiper-pagination',
+  //         clickable: true,
+  //     },
+  //   });
 
-    // SWIPER CATEGORY
-    const swiper_category = new Swiper('.category-slider', {
+  //   // SWIPER CATEGORY
+    const swiper_category = new Swiper('.swiper-category', {
       loop: true,
-      slidesPerView: 1,
-      spaceBetween: 45,
+      slidesPerView: 2,
+      spaceBetween: 25,
       autoplay: {
           delay: 5000,
           disableOnInteraction: false,
@@ -118,61 +118,70 @@ function soma_activate_scripts(){ ?>
       breakpoints: {
       // define diferentes opções para diferentes larguras de tela
       768: {
-        slidesPerView: 2,
+        slidesPerView: 3,
         spaceBetween: 25,
       },
       1024: {
-        slidesPerView: 3,
+        slidesPerView: 4,
         spaceBetween: 35,
       },
       1280: {
-        slidesPerView: 4,
+        slidesPerView: 5,
         spaceBetween: 45,
       }
     }
     });
 
-    var swiper = new Swiper(".mySwiper", {
-      effect: "coverflow",
-      grabCursor: true,
+  //   var swiper = new Swiper(".mySwiper", {
+  //     effect: "coverflow",
+  //     grabCursor: true,
+  //     centeredSlides: true,
+  //     slidesPerView: "auto",
+  //     loop: true,
+  //     autoplay: {
+  //         delay: 5000,
+  //         disableOnInteraction: false,
+  //     },
+  //     coverflowEffect: {
+  //       rotate: 50,
+  //       stretch: 0,
+  //       depth: 100,
+  //       modifier: 1,
+  //       slideShadows: true,
+  //     },
+  //     pagination: {
+  //       el: ".swiper-pagination",
+  //     },
+  //   });
+
+    var main_swiper = new Swiper(".main-slider", {
+      slidesPerView: '1',
+      spaceBetween: 16,
       centeredSlides: true,
-      slidesPerView: "auto",
       loop: true,
-      autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-      },
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      },
-      pagination: {
-        el: ".swiper-pagination",
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
     });
 
-    var main_swiper = new Swiper(".main-slider", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      loop: true,
+    var swiper = new Swiper('.swiper-highlights', {
+      slidesPerView: '2',
+      spaceBetween: 10,
       autoplay: {
           delay: 5000,
           disableOnInteraction: false,
       },
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      },
-      pagination: {
-        el: ".swiper-pagination",
+      breakpoints: {
+        680: {
+          slidesPerView: 3,
+        },
+        720: {
+          slidesPerView: 4,
+        },
+        1000: {
+          slidesPerView: 5,
+        }
       },
     });
 </script>

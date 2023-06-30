@@ -4,7 +4,8 @@ define( 'bytebloom_VERSION', '0.0.5' );
 add_theme_support( 'post-thumbnails' );
 
 if (function_exists('add_image_size')) {
-  //add_image_size( 'thumb_square', 155, 155, true );
+  add_image_size( 'thumb_1', 235, 160, true );
+  add_image_size( 'thumb_banner', 1920, 1080, true );
 }
 
 remove_action('wp_head', 'print_emoji_detection_script', 7);
