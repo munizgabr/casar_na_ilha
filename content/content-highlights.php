@@ -1,6 +1,6 @@
 <section class="grid grid-cols-1 items-center">
   <div class="center flex flex-row place-content-between p-4 items-center">
-    <h2 class="font-bold text0black text-xl">Empresas em destaque</h2>
+    <h2 class="font-bold text-white text-xl">Empresas em destaque</h2>
     <img src="<?php echo get_template_directory_uri(); ?>/src/images/fornecedor-premium.png" alt="Fornecedores premium">
   </div>
   <div class="center swiper-highlights pb-4 overflow-hidden">

@@ -5,7 +5,8 @@
  * @package SOMA Dev
  * @since 0.0.1
  */ ?>
-		<footer class="wrapper-footer">
+		<footer class="wrapper-footer bg-transparent">
+			<img class="absolute z-[-1] right-0 left-0 top-[-222px]" src="<?php bloginfo('template_url');?>/src/images/bg.png" alt="wave">
 			<div class="footer-menu1"><?php if ( ! dynamic_sidebar( 'footer1' ) ) : endif; ?></div>
 			<div class="footer-menu2"><?php if ( ! dynamic_sidebar( 'footer2' ) ) : endif; ?></div>
 			<div class="footer-menu3">
@@ -15,7 +16,7 @@
 				<a href="https://youtube.com" title="Youtube Parker" target="_blank" class="group"><svg class="group-hover:opacity-50" fill="white" style="background-color: transparent;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg></a>
 			</div>
 			<div class="copyright">
-				<span>&copy&nbsp Casar na Ilha</span>
+				<span class="text-white font-bold">&copy&nbsp Casar na Ilha</span>
 			</div>
 		</footer>
 		<?php wp_footer(); ?>
