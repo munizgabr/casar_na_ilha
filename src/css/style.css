@@ -6,4 +6,8 @@
     .fornecedores {
         @apply rounded-md overflow-hidden hover:scale-[1.025] hover:opacity-40 ease-in duration-300;
     }
+
+    .btn-ver-todos {
+        @apply text-white font-semibold border border-white px-4 py-2 hover:text-[#001C30] hover:bg-white hover:no-underline;
+    }
 }

@@ -18,7 +18,9 @@ get_header();?>
 						endif;
 					}, [
 						'main-slider',
-						'partners'
+						'highlights',
+						'categories',
+						'blog-posts',
 					]);
 				endwhile;
 				else :

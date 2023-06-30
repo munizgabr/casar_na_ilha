@@ -5,43 +5,13 @@
  * @since 0.0.1
  */
 get_header();
-?>
-
-<!-- Slider -->
-<section class="main-slider mt-[80px] sm:mt-[90px] overflow-hidden h-auto relative pb-4">
-  <div class="swiper-wrapper">
-    <?php
     $slider_posts = get_posts(array(
       'post_type' => 'fornecedor',
       'orderby' => 'name',
       'order' => 'DESC'
-    ));
-
-    foreach ($slider_posts as $post) :
-      setup_postdata($post);
-      $adsType = get_field('advertising-type');
-      $thumb = get_the_post_thumbnail_url(get_the_ID(), 'thumb_banner');
-      if (in_array('Banner principal', $adsType)) :
-    ?>
-        <div class="swiper-slide h-[55vh]" style="background-image: url(<?php echo !empty($thumb) ? $thumb : get_template_directory_uri() . '/src/images/wedding.jpg' ?>);background-size:100%;">
-          <div class="center grid grid-cols-1 sm:grid-cols-2 h-full items-center text-md">
-            <div class="description font-bold text-white text-center">
-              <?php echo wp_trim_words(get_the_content(), 30, '...'); ?>
-            </div>
-            <a class="btn font-bold" href="<?php the_permalink(); ?>" title="Saiba mais sobre <?php the_title(); ?>">Saiba mais!</a>
-          </div>
-        </div>
-    <?php
-      endif;
-    endforeach;
-    wp_reset_postdata();
-    ?>
-  </div>
-</section>
-
-
+    ));?>
 <!-- Highlights -->
-<section class="grid grid-cols-1 items-center bg-gradient-to-b from-white via-[#64CCC5] to-[#176B87]">
+<section class="grid grid-cols-1 items-center">
   <div class="center flex flex-row place-content-between p-4 items-center">
     <h2 class="font-bold text0black text-xl">Empresas em destaque</h2>
     <img src="<?php echo get_template_directory_uri(); ?>/src/images/fornecedor-premium.png" alt="Fornecedores premium">
@@ -84,7 +54,7 @@ get_header();
 </section>
 
 <!-- Blog posts -->
-<section class="p-4 bg-gradient-to-b from-[#176B87] to-[#001C30]">
+<section class="p-4">
   <span class="uppercase text-lg text-center text-white my-4 font-bold block">Últimas notícias</span>
   <div class="center p-4 grid grid-cols-3 grid-rows-3 gap-3 bg-[#ffffff66] rounded-md items-center justify-center text-center">
     <?php
@@ -120,7 +90,7 @@ get_header();
         $post_title = get_the_title($post);
         $post_content = wp_trim_words(get_the_content($post), 10, '...');
     ?>
-        <a href="<?php echo get_permalink($post); ?>" class="secundario h-full rounded-md overflow-hidden font-semibold text-black text-lg relative">
+        <a href="<?php echo get_permalink($post); ?>" class="secundario h-full rounded-md overflow-hidden font-semibold text-black text-lg relative" title="<?php the_title();?>">
           <img class="w-full h-full object-cover" src="<?php echo (!empty($post_thumbnail)) ? $post_thumbnail : bloginfo('template_url') . '/src/images/ensaio.jpg'; ?>" alt="<?php echo $post_title; ?>">
           <div class="absolute bottom-0 w-full bg-[#ffffff66]">
             <span class="font-bold text-lg text-black uppercase"><?php echo $post_title; ?></span>
@@ -132,6 +102,7 @@ get_header();
     }
     wp_reset_postdata();
     ?>
+    <a href="<?php echo get_post_type_archive_link('post');?>" title="Ir para o blog" class="row-start-5 row-end-5 col-start-2 col-end-3 btn-ver-todos">Conheça nosso blog!</a>
   </div>
 </section>
 
@@ -142,10 +113,10 @@ $terms = get_terms('tipo');
 foreach ($terms as $term) :
   if(!empty($term)) :
 ?>
-  <section class="swiper-category relative py-4 px-8 last:mb-4 bg-[#001C30] overflow-hidden">
+  <section class="swiper-category relative py-4 px-8 last:mb-4 overflow-hidden">
     <div class="w-full flex items-center place-content-between">
       <span class="uppercase text-white font-extrabold"><?php echo $term->name; ?></span>
-      <a class="text-white font-semibold border border-white px-4 py-2 hover:text-[#001C30] hover:bg-white hover:no-underline" href="#" title="Ver todos">Ver todos</a>
+      <a class="btn-ver-todos" href="#" title="Ver todos">Ver todos</a>
     </div>
     <div class="swiper-wrapper p-4">
       <?php
