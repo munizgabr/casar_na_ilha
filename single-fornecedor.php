@@ -11,10 +11,18 @@ get_header(); ?>
     // Recuperar informações do post personalizado "fornecedor"
     $value = get_field('value');
     $local = get_field('local');
+    $categories = get_the_terms(get_the_ID(), 'tipo');
+    if ($categories) {
+        $category_names = array(); // Inicializa um array vazio para armazenar os nomes das categorias
+        foreach ($categories as $category) {
+            $category_names[] = $category->name; // Adiciona o nome da categoria ao array
+        }
+        // Concatena os nomes das categorias usando " | "
+        $category_list = implode(' | ', $category_names);
+    }
     $city = $local['city'];
     $neighborhood = $local['neighborhood'];
     $location = $neighborhood . ', ' . $city;
-    $info = get_field('info');
     $capacity = get_field('capacity');
     $services = get_field('services');
     $gallery = get_field('gallery');
@@ -46,9 +54,10 @@ get_header(); ?>
     if (have_posts()) :
         while (have_posts()) : the_post();
     ?>
-            <a href="#" title="Categoria" class="text-white font-thin text-sm flex items-center">
-                <img src="<?php bloginfo('template_url') ?>/src/images/category.png" alt="Categoria"> Espaços
-            </a>
+            <div class="text-white font-thin text-sm flex items-center">
+                <img src="<?php bloginfo('template_url') ?>/src/images/category.png" alt="Categoria">
+                <?php echo $category_list; ?>
+            </div>
             <div class="grid sm:grid-cols-4 sm:gap-4 p-4 mt-4 bg-white rounded-md">
                 <div class="sm:col-start-1 sm:col-span-2">
                     <img class="rounded-md" src="<?php bloginfo('template_url') ?>/src/images/casamento.jpeg" alt="">
@@ -62,10 +71,10 @@ get_header(); ?>
                     <div class="grid grid-cols-[20px_auto] gap-2">
                         <img src="<?php echo get_template_directory_uri(); ?>/src/images/capacity.png" alt="Capacidade"> <?php echo !empty($capacity) ? 'Até '.$capacity.' pessoas' : 'A partir de 100 pessoas'; ?>
                     </div>
-                    <a href="#" title="Acesse o nosso instagram" target="_blank" class="grid grid-cols-[20px_auto] gap-2 items-center">
+                    <a href="https://www.instagram.com/<?php echo $insta;?>" title="Acesse o nosso instagram" target="_blank" class="grid grid-cols-[20px_auto] gap-2 items-center">
                         <img src="<?php echo get_template_directory_uri(); ?>/src/images/insta.png" alt="Custo"> Vem dar uma olhada no nosso insta!
                     </a>
-                    <a href="#" title="Acesse o nosso facebook" target="_blank" class="grid grid-cols-[20px_auto] gap-2 items-center">
+                    <a href="<?php echo $facebook;?>" title="Acesse o nosso facebook" target="_blank" class="grid grid-cols-[20px_auto] gap-2 items-center">
                         <img src="<?php echo get_template_directory_uri(); ?>/src/images/facebook.png" alt="Custo"> Siga-nos no Facebook
                     </a>
                 </div>
@@ -76,7 +85,7 @@ get_header(); ?>
             <div class="center py-4">
                 <div class="mb-4">
                     <span class="font-bold text-lg text-white">Informação</span>
-                    <p class="text-white"><?php echo !empty($info) ? $info : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt, velit dicta iure omnis est laborum quas repellendus nisi nesciunt cupiditate incidunt asperiores officia vitae laudantium quisquam dolorum animi! Veritatis!' ?></p>
+                    <p class="text-white"><?php echo !empty(get_the_content()) ? get_the_content() : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt, velit dicta iure omnis est laborum quas repellendus nisi nesciunt cupiditate incidunt asperiores officia vitae laudantium quisquam dolorum animi! Veritatis!' ?></p>
                 </div>
                 <div class="mb-4">
                     <span class="font-bold text-lg text-white">Serviços</span>
