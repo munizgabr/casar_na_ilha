@@ -60,7 +60,15 @@ get_header(); ?>
             </div>
             <div class="grid sm:grid-cols-4 sm:gap-4 p-4 mt-4 bg-white rounded-md">
                 <div class="sm:col-start-1 sm:col-span-2">
-                    <img class="rounded-md" src="<?php bloginfo('template_url') ?>/src/images/casamento.jpeg" alt="">
+                    <div class="swiper-img overflow-hidden">
+                        <div class="swiper-wrapper">
+                        <?php
+                        foreach($gallery as $img){
+                            echo "<img class='rounded-md swiper-slide' src='".$img."' alt='Galeria do fornecedor'>";
+                        }
+                        ?>
+                        </div>
+                    </div>
                 </div>
                 <div class="p-4 sm:col-start-3 sm:col-end-5 sm:self-center flex flex-col gap-[5px]">
                     <span class="text-lg text-[#001C30] font-bold"><?php the_title(); ?></span>
