@@ -164,6 +164,16 @@ function soma_activate_scripts(){ ?>
         prevEl: '.swiper-button-prev',
       },
     });
+    var gallery_swiper = new Swiper(".swiper-img", {
+      slidesPerView: '1',
+      spaceBetween: 16,
+      centeredSlides: true,
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
 
     var swiper = new Swiper('.swiper-highlights', {
       slidesPerView: '2',

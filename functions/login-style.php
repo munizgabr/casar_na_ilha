@@ -17,7 +17,7 @@ function login_enqueue_scripts(){ ?>
                 height:100%;
                 color: #dddc00 !important;
             }
-            #login p#nav a, #login p#backtoblog a{color: #333 !important;}
+            #login p#nav a, #login p#backtoblog a{color: #001C30 !important;}
             #login{
                 z-index:9999;
                 position:relative;
@@ -37,11 +37,11 @@ function login_enqueue_scripts(){ ?>
             }
             .login form { box-shadow: 0px 0px 0px 0px !important; }
             .login h1 a {
-                background: url('<?php echo get_bloginfo('template_directory') ?>/src/images/parker.png') no-repeat center top !important;
+                background: url('<?php echo get_bloginfo('template_directory') ?>/src/images/logo_casar_na_ilha.png') no-repeat center top !important;
                 margin-bottom: 0px !important;
                 padding-bottom: 0px;
                 width: 238px!important;
-                height: 80px !important;
+                height: 105px !important;
                 display: block;
                 background-size: 100% !important;
                 display: block;
@@ -49,21 +49,21 @@ function login_enqueue_scripts(){ ?>
             input.button-primary, button.button-primary, .button-primary{
                 border-radius: 3px !important;
                 border:none !important;
-                background-color: #333 !important;
+                background-color: #001C30 !important;
                 font-weight:normal !important;
                 text-shadow:none !important;
                 color: #fff !important;
                 }
                 .button:active, .submit input:active, .button-secondary:active {
-                    background: #333 !important;
+                    background: #001C30 !important;
                     text-shadow: none !important;
                 }
                 .login #nav a, .login #backtoblog a {
-                    color: #333 !important;
+                    color: #001C30 !important;
                     text-shadow: none !important;
                 }
                 .login #nav a:hover, .login #backtoblog a:hover{
-                    color: #333 !important;
+                    color: #001C30 !important;
                     text-shadow: none !important;
                 }
                 .login #nav, .login #backtoblog{

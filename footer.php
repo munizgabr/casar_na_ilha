@@ -5,8 +5,7 @@
  * @package SOMA Dev
  * @since 0.0.1
  */ ?>
-		<footer class="wrapper-footer bg-transparent">
-			<img class="absolute z-[-1] right-0 left-0 top-[-222px]" src="<?php bloginfo('template_url');?>/src/images/bg.png" alt="wave">
+		<footer class="wrapper-footer">
 			<div class="footer-menu1"><?php if ( ! dynamic_sidebar( 'footer1' ) ) : endif; ?></div>
 			<div class="footer-menu2"><?php if ( ! dynamic_sidebar( 'footer2' ) ) : endif; ?></div>
 			<div class="footer-menu3">
