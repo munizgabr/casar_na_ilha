@@ -21,6 +21,7 @@ get_header();?>
 						'highlights',
 						'categories',
 						'blog-posts',
+						'search'
 					]);
 				endwhile;
 				else :

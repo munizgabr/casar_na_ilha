@@ -1,91 +1,84 @@
-.search-form {
-
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 15px;
+/* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+.content-form {
     
-
-    .cssbuttons-io-button {
-        background: #176B87;
-        color: white;
-        font-family: inherit;
-        padding: 0.35em;
-        padding-left: 1.2em;
-        font-size: 17px;
-        font-weight: 500;
-        border-radius: 0.9em;
-        border: none;
-        letter-spacing: 0.05em;
-        display: flex;
-        align-items: center;
-        box-shadow: inset 0 0 1.6em -0.6em #9e7831;
-        overflow: hidden;
-        position: relative;
-        height: 2.8em;
-        padding-right: 3.3em;
-        .icon {
-            background: white;
-            margin-left: 1em;
-            position: absolute;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 2.2em;
-            width: 2.2em;
-            border-radius: 0.7em;
-            box-shadow: 0.1em 0.1em 0.6em 0.2em #9e7831;
-            right: 0.3em;
-            transition: all 0.3s;
-            svg {
-                width: 1.1em;
-                transition: transform 0.3s;
-                color: #9e7831;
-                fill: #176B87;
-            }
-        }
-        &:hover {
-            .icon {
-                width: calc(100% - 0.6em);
-                svg {
-                    transform: translateX(0.1em);
-                }
-            }
-        }
-        &:active {
-            .icon {
-                transform: scale(0.95);
-            }
-        }
-    }
-
 }
-.sidebar {
-    padding: 15px;
-    border: 0.5px solid #464949;
-    border-radius: 8px;
-    box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
-    .widget-title {
-        color: black;
-        font-size: 1.5em;
-        font-weight: 600;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        &:hover {
-            text-decoration: none;
-        }
-    }
-    a {
-        color: #464949;
-        &:hover {
-            color: darken($color: #464949, $amount: 15%);
-            text-decoration: none;
-        }
-    }
-    .search-field {
+.form button {
+    border: none;
+    background: none;
+    color: #8b8ba7;
+  }
+  /* styling of whole input container */
+  .form {
+    --timing: 0.3s;
+    --width-of-input: 200px;
+    --height-of-input: 40px;
+    --border-height: 2px;
+    --input-bg: #fff;
+    --border-color: #2f2ee9;
+    --border-radius: 30px;
+    --after-border-radius: 1px;
+    position: relative;
+    width: var(--width-of-input);
+    height: var(--height-of-input);
+    display: flex;
+    align-items: center;
+    padding-inline: 0.8em;
+    border-radius: var(--border-radius);
+    transition: border-radius 0.5s ease;
+    background: var(--input-bg,#fff);
+  }
+  /* styling of Input */
+  .input {
+    font-size: 0.9rem;
+    background-color: transparent;
     width: 100%;
     height: 100%;
-    box-sizing: border-box;
     padding-inline: 0.5em;
     padding-block: 0.7em;
-    border: 0.5px solid #464949;
-    }
-}
+    border: none;
+  }
+  /* styling of animated border */
+  .form:before {
+    content: "";
+    position: absolute;
+    background: var(--border-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: var(--border-height);
+    left: 0;
+    bottom: 0;
+    border-radius: 1px;
+    transition: transform var(--timing) ease;
+  }
+  /* Hover on Input */
+  .form:focus-within {
+    border-radius: var(--after-border-radius);
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  /* here is code of animated border */
+  .form:focus-within:before {
+    transform: scale(1);
+  }
+  /* styling of close button */
+  /* == you can click the close button to remove text == */
+  .reset {
+    border: none;
+    background: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* close button shown when typing */
+  input:not(:placeholder-shown) ~ .reset {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* sizing svg icons */
+  .form svg {
+    width: 17px;
+    margin-top: 3px;
+  }
