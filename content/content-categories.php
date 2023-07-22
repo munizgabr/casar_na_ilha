@@ -1,12 +1,13 @@
 <?php
 $terms = get_terms('tipo');
 foreach ($terms as $term) :
+  $term_link = get_term_link($term);
   if(!empty($term)) :
 ?>
   <section class="swiper-category relative py-4 px-8 last:mb-4 overflow-hidden">
     <div class="w-full flex items-center place-content-between">
       <span class="uppercase text-white font-extrabold"><?php echo $term->name; ?></span>
-      <a class="btn-ver-todos" href="#" title="Ver todos">Ver todos</a>
+      <a class="btn-ver-todos" href="<?php echo esc_url($term_link);?>" title="Ver todos">Ver todos</a>
     </div>
     <div class="swiper-wrapper p-4">
       <?php
