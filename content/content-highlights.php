@@ -25,7 +25,7 @@
             <img src="<?php echo !empty($thumbnail) ? $thumbnail : get_template_directory_uri() . '/src/images/ensaio.jpg'; ?>" alt="<?php the_title(); ?>">
             <div class="p-4">
               <span class="text-lg text-[#001C30] font-bold"><?php the_title(); ?></span>
-              <div>4* <?php echo !empty($location) ? $location : "Bairro, Cidade"; ?></div>
+              <div><?php echo !empty($location) ? $location : "Bairro, Cidade"; ?></div>
               <div class="grid grid-cols-[20px_auto] gap-2">
                 <img src="<?php echo get_template_directory_uri(); ?>/src/images/coin.png" alt="Custo"> <?php echo $value; ?>
               </div>

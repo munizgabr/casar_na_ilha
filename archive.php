@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @package SOMA Dev
+ * @package Mithril Webworks
  * @since 0.0.1
  */
 get_header();
@@ -11,7 +11,7 @@ $term = get_queried_object();
 $tipo_slug = $term->slug;
 
 // Definindo o número de posts por página
-$posts_per_page = 20;
+$posts_per_page = 1;
 
 // Obtendo o número total de fornecedores para a paginação
 $total_posts = wp_count_posts('fornecedor');
@@ -20,9 +20,8 @@ $total_fornecedores = $total_posts->publish;
 // Calculando o número total de páginas necessárias para a paginação
 $total_pages = ceil($total_fornecedores / $posts_per_page);
 
-
 // Obtendo o número da página atual
-$paged = get_query_var('paged') ? get_query_var('paged') : 1;
+$paged = get_query_var('page') ? get_query_var('page') : 1;
 
 // Ajustando a consulta WP_Query com base na paginação
 $args = array(
@@ -64,7 +63,7 @@ $term_description = wp_strip_all_tags(term_description());
                     <img src="<?php echo !empty($thumbnail) ? $thumbnail : get_template_directory_uri() . '/src/images/ensaio.jpg'; ?>" alt="<?php the_title(); ?>">
                     <div class="p-4 bg-white">
                         <span class="text-lg text-[#001C30] font-bold"><?php the_title(); ?></span>
-                        <div>4* <?php echo !empty($location) ? $location : "Bairro, Cidade"; ?></div>
+                        <div><?php echo !empty($location) ? $location : "Bairro, Cidade"; ?></div>
                         <div class="grid grid-cols-[20px_auto] gap-2">
                             <img src="<?php echo get_template_directory_uri(); ?>/src/images/coin.png" alt="Custo"> <?php echo $value; ?>
                         </div>
@@ -77,7 +76,7 @@ $term_description = wp_strip_all_tags(term_description());
             // Exibir links de paginação
             $pagination_args = array(
                 'base'      => get_pagenum_link(1) . '%_%',
-                'format'    => 'page/%#%',
+                'format'    => '?paged=%#%&tipo=' . $tipo_slug, // Ajustando a estrutura do link de paginação
                 'total'     => $total_pages,
                 'current'   => $paged,
                 'prev_next' => true,
@@ -88,6 +87,7 @@ $term_description = wp_strip_all_tags(term_description());
             echo paginate_links($pagination_args);
             echo '</div>';
 
+            // Redefinir a consulta do WordPress antes de exibir a próxima página
             wp_reset_postdata();
         else :
             // Caso não haja fornecedores do tipo especificado, exibir uma mensagem alternativa

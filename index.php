@@ -1,6 +1,6 @@
 <?php
 /**
- * @package SOMA Dev
+ * @package Mithril Webworks
  * @since 0.0.1
  */
 get_header();
