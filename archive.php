@@ -11,7 +11,7 @@ $term = get_queried_object();
 $tipo_slug = $term->slug;
 
 // Definindo o número de posts por página
-$posts_per_page = 1;
+$posts_per_page = 20;
 
 // Obtendo o número total de fornecedores para a paginação
 $total_posts = wp_count_posts('fornecedor');
@@ -73,15 +73,19 @@ $term_description = wp_strip_all_tags(term_description());
             </div>
             <?php
 
+            $pagenum_link = html_entity_decode( get_pagenum_link() );
+            $url_parts    = explode( '?', $pagenum_link );
+            $pagenum_link = trailingslashit( $url_parts[0] ) . '%_%';
+
             // Exibir links de paginação
             $pagination_args = array(
-                'base'      => get_pagenum_link(1) . '%_%',
-                'format'    => '?paged=%#%&tipo=' . $tipo_slug, // Ajustando a estrutura do link de paginação
+                'base'      => $pagenum_link,
+                'format'    => '?page=%#%&tipo=' . $tipo_slug, // Ajustando a estrutura do link de paginação
                 'total'     => $total_pages,
                 'current'   => $paged,
                 'prev_next' => true,
-                'prev_text' => __('« Anterior'),
-                'next_text' => __('Próximo »'),
+                'prev_text' => __('<img src="' . get_template_directory_uri() . '/src/images/arrow-left.png" alt="anterior">'),
+                'next_text' => __('<img src="' . get_template_directory_uri() . '/src/images/arrow-rigth.png" alt="próximo">'),
             );
             echo '<div class="pagination">';
             echo paginate_links($pagination_args);
