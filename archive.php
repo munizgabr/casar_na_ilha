@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @package Mithril Webworks
+ * @package Neuring Tech
  * @since 0.0.1
  */
 get_header();

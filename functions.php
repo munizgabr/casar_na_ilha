@@ -1,6 +1,6 @@
 <?php
 
-define( 'mithrilwebworks_VERSION', '0.0.5' );
+define( 'neuringtech_VERSION', '0.0.5' );
 add_theme_support( 'post-thumbnails' );
 
 if (function_exists('add_image_size')) {
