@@ -111,10 +111,12 @@
 				padding-bottom: 12px;
 				position: relative;
 				&:before {
-					content: url(../../src/images/menu-bullet.png);
+					content:' ';
+					border-bottom: 1px solid;
 					opacity: 0;
-					vertical-align: middle;
-					margin-right: 5px;
+					position: absolute;
+    				bottom: 0;
+					padding-right: 100%;
 				}
 
 				&:hover {
@@ -126,6 +128,16 @@
 					}
 				}
 
+			}
+			&.current-menu-item {
+				a {
+					text-decoration: none;
+					color: #176B87 !important;
+					&:before {
+						opacity: 1;
+					}
+				}
+				
 			}
 
 		}

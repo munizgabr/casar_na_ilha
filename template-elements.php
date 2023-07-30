@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Elementos
- * @package Soma
+ * @package Neuring Tech
  * @since 0.0.1
  */
 get_header();?>
@@ -21,6 +21,7 @@ get_header();?>
 						'highlights',
 						'categories',
 						'blog-posts',
+						'search'
 					]);
 				endwhile;
 				else :

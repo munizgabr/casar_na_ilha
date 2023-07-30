@@ -10,4 +10,20 @@
     .btn-ver-todos {
         @apply text-white font-semibold border border-white px-4 py-2 hover:text-[#001C30] hover:bg-white hover:no-underline;
     }
+
+    .pagination {
+     @apply text-center flex items-center justify-center gap-[4px];
+    }
+
+    .page-numbers.current {
+        @apply bg-[#176B87] text-white p-[5px] font-bold;
+    }
+
+    .pagination .prev.page-numbers, .pagination .next.page-numbers{
+        @apply flex bg-transparent;
+    }
+
+    .pagination a{
+        @apply bg-white text-[#176B87] p-[5px] font-bold;
+    }
 }

@@ -1,7 +1,6 @@
 @import "./components/avariables";
 @import "./components/amixins";
 @import "./components/reset";
-@import "./components/formularios";
 @import "./components/header";
 @import "./components/footer";
 @import "./components/menu";
@@ -15,6 +14,8 @@
 @import "./components/card";
 @import "./components/single";
 @import "./components/archive";
+@import "./components/privacy-policy";
+@import "./components/page";
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;

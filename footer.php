@@ -2,7 +2,7 @@
 /**
  * The template for displaying the footer.
  *
- * @package SOMA Dev
+ * @package Neuring Tech
  * @since 0.0.1
  */ ?>
 		<footer class="wrapper-footer">
