@@ -1,6 +1,6 @@
-<section class="p-4">
+<section class="py-4 center">
   <span class="uppercase text-lg text-center text-white my-4 font-bold block">Últimas notícias</span>
-  <div class="center p-4 grid grid-cols-3 grid-rows-3 gap-3 bg-[#ffffff66] rounded-md items-center justify-center text-center">
+  <div class=" w-full mx-0 p-4 grid grid-cols-3 grid-rows-3 gap-3 bg-[#ffffff66] rounded-md items-center justify-center text-center">
     <?php
     $recent_posts = get_posts(array(
       'post_type' => 'post',
@@ -8,6 +8,7 @@
       'order' => 'DESC' // Ordenar em ordem decrescente
     ));
     $post_count = count($recent_posts);
+    $blog_page_url = get_permalink(get_page_by_path('blog'));
 
     // Verificar se há pelo menos um post
     if ($post_count > 0) {
@@ -46,6 +47,6 @@
     }
     wp_reset_postdata();
     ?>
-    <a href="<?php echo get_post_type_archive_link('post');?>" title="Ir para o blog" class="row-start-5 row-end-5 col-start-2 col-end-3 btn-ver-todos">Conheça nosso blog!</a>
+    <a href="<?php echo $blog_page_url;?>" title="Ir para o blog" class="row-start-5 row-end-5 col-start-2 col-end-3 btn-ver-todos">Conheça nosso blog!</a>
   </div>
 </section>

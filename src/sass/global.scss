@@ -16,10 +16,12 @@
 @import "./components/archive";
 @import "./components/privacy-policy";
 @import "./components/page";
+@import "./components/formulario.scss";
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 .wow {
 
     visibility: hidden;

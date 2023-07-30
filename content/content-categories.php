@@ -1,3 +1,7 @@
+
+<a href="#anuncie-aqui" title="Anuncie conosco" class="bg-white p-6 rounded-md center block text-center uppercase font-bold text-black hover:text-white border-4 border-white hover:bg-transparent ease-in duration-300">
+  Quer anunciar de graça? Clique aqui
+</a>
 <?php
 $terms = get_terms('tipo');
 foreach ($terms as $term) :
@@ -39,6 +43,4 @@ foreach ($terms as $term) :
     </div>
   </section>
 <?php endif;
-endforeach;
-get_footer();
-?>
+endforeach;?>

@@ -188,6 +188,21 @@ function neuringtech_activate_scripts()
     window.onload = function() {
       cookieConsent()
     };
+
+    //mascara para cpf e cnpj
+    document.addEventListener('DOMContentLoaded', function() {
+      const cpfCnpjInput = document.getElementById('cpf_cnpj');
+      cpfCnpjInput.addEventListener('input', function(event) {
+        let value = event.target.value;
+        value = value.replace(/\D/g, '');
+        if (value.length > 11) {
+          value = value.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/, '$1.$2.$3/$4-$5');
+        } else {
+          value = value.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})$/, '$1.$2.$3-$4');
+        }
+        event.target.value = value;
+      });
+    });
   </script>
 
 <?php
