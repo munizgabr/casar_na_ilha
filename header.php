@@ -23,7 +23,7 @@
 	<style>[x-cloak] { display: none !important; }</style>
 	<?php wp_head(); ?>
 </head>
-	<body <?php body_class('bg-gradient-to-t from-white via-[#176B87] to-[#001C30]'); ?>>
+	<body <?php body_class('bg-[#176B87]'); ?>>
 		<div class="all line">
 			<header class="header content line principal-header fixed">
 				<div class="center-header">
