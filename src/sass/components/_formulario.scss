@@ -50,11 +50,6 @@
             &::placeholder{
                 opacity: 1;
             }
-            .label-animation {
-                color: black;
-                top: 20px;
-                transform: translateY(50%);
-            }
         }
         &:not(:placeholder-shown){
             border-color: darken($color: #64CCC5, $amount: 20%);
@@ -65,4 +60,13 @@
         position: absolute;
         top: -25px;
     }
+}
+
+.label-animation--focus {
+    color: white !important;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: #0e4153;
+    padding: 0 5px;
+    transition: .3s ease-in-out;
 }

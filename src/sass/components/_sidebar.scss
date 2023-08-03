@@ -1,0 +1,11 @@
+.wp-block-heading, .widget-title {
+    text-decoration: none;
+    color: #176B87;
+    font-weight: bold;
+}
+.wp-block-latest-posts__post-title, ul li a {
+    color: #176B87;
+    &:hover {
+        color: lighten($color: #176B87, $amount: 10%);
+    }
+}

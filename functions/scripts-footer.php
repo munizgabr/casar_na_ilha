@@ -203,6 +203,39 @@ function neuringtech_activate_scripts()
         event.target.value = value;
       });
     });
+    $(document).ready(function() {
+  // Selecionar todos os campos de entrada e textarea dentro da classe .form-group
+  const formInputs = $(".form-group input, .form-group textarea");
+
+  // Adicionar um ouvinte de evento para o evento "focus" nos campos de entrada e textarea
+  formInputs.on("focus", function() {
+    // Encontrar o label associado a este campo de entrada ou textarea
+    const label = $(this).closest(".form-group").find("label");
+
+    // Adicionar a classe "label-animation--focus" ao label encontrado
+    label.addClass("label-animation--focus");
+
+    // Verificar se o elemento clicado é um input ou textarea e adicionar o estilo apropriado ao label
+    if ($(this).is("input")) {
+      label.css("top", "37%");
+    } else if ($(this).is("textarea")) {
+      label.css("top", "8%");
+    }
+  });
+
+  // Adicionar um ouvinte de evento para o evento "blur" nos campos de entrada e textarea
+  formInputs.on("blur", function() {
+    // Encontrar o label associado a este campo de entrada ou textarea
+    const label = $(this).closest(".form-group").find("label");
+
+    // Remover a classe "label-animation--focus" do label encontrado
+    label.removeClass("label-animation--focus");
+
+    // Remover o estilo de top adicionado ao label
+    label.css("top", "");
+  });
+});
+
   </script>
 
 <?php
