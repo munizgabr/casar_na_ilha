@@ -1,5 +1,7 @@
 $(document).ready(function(){
-
+	$('.rmm .menu li.menu-item-has-children').click(function() {
+        $(this).toggleClass('active').siblings().removeClass('active');
+    });
 	$("body").on("click", '.nav-item', function(e) {
 		$('.nav-item').toggleClass("open");
 		$('.rmm').toggleClass("open");

@@ -18,8 +18,8 @@
 		    display: inline-block;
 		    padding: 3px;
 		    content: "";
-		    right: 0;
-	    	top: 4px;
+		    right: -10px;
+    		top: 10px;
 		}
 	}
 
@@ -46,6 +46,23 @@
 
 		li {
 
+			&.anuncie {
+				a {
+					background-color: #176B87;
+					color: white;
+					padding: 5px;
+					border-radius: 15px;
+					border: 2px solid #176B87;
+					&:hover {
+						background-color: #fff;
+						color: #176B87;
+						transition: .3s ease-in-out;
+					}
+					&::before {
+						content: none;
+					}
+				}
+			}
 			display: inline-block;
 			margin-left: 40px;
 			position: relative;
@@ -108,7 +125,7 @@
 				text-transform: uppercase;
 				font-weight: bold;
 				font-size: 1em;
-				padding-bottom: 12px;
+				padding: 5px;
 				position: relative;
 				&:before {
 					content:' ';
@@ -116,7 +133,7 @@
 					opacity: 0;
 					position: absolute;
     				bottom: 0;
-					padding-right: 100%;
+					width: 90%;
 				}
 
 				&:hover {
