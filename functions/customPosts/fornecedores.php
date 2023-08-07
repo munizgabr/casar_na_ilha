@@ -4,16 +4,16 @@ add_action('init', 'fornecedor_register_init');
 
 function fornecedor_register_init() {
     $labels = array(
-        'name' => _x( 'Fornecedores', 'post type general name', 'mithrilwebworks' ),
-        'singular_name' => _x( 'Fornecedor', 'post type singular name', 'mithrilwebworks' ),
-        'add_new' => _x( 'Adicionar novo', 'fornecedor entry', 'mithrilwebworks' ),
-        'add_new_item' => __('Adicionar novo fornecedor', 'mithrilwebworks' ),
-        'edit_item' => __( 'Editar fornecedor', 'mithrilwebworks' ),
-        'new_item' => __( 'Novo fornecedor', 'mithrilwebworks' ),
-        'view_item' => __( 'Visualizar fornecedor', 'mithrilwebworks' ),
-        'search_items' => __( 'Procurar fornecedores', 'mithrilwebworks' ),
-        'not_found' =>  __( 'Nenhum fornecedor encontrado', 'mithrilwebworks' ),
-        'not_found_in_trash' => __( 'Nenhum fornecedor foi encontrado na lixeira', 'mithrilwebworks' ),
+        'name' => _x( 'Fornecedores', 'post type general name', 'neuringtech' ),
+        'singular_name' => _x( 'Fornecedor', 'post type singular name', 'neuringtech' ),
+        'add_new' => _x( 'Adicionar novo', 'fornecedor entry', 'neuringtech' ),
+        'add_new_item' => __('Adicionar novo fornecedor', 'neuringtech' ),
+        'edit_item' => __( 'Editar fornecedor', 'neuringtech' ),
+        'new_item' => __( 'Novo fornecedor', 'neuringtech' ),
+        'view_item' => __( 'Visualizar fornecedor', 'neuringtech' ),
+        'search_items' => __( 'Procurar fornecedores', 'neuringtech' ),
+        'not_found' =>  __( 'Nenhum fornecedor encontrado', 'neuringtech' ),
+        'not_found_in_trash' => __( 'Nenhum fornecedor foi encontrado na lixeira', 'neuringtech' ),
         'parent_item_colon' => ''
     );
 

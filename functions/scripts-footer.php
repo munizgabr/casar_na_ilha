@@ -188,6 +188,76 @@ function neuringtech_activate_scripts()
     window.onload = function() {
       cookieConsent()
     };
+
+    //mascara para cpf e cnpj
+    document.addEventListener('DOMContentLoaded', function() {
+      const cpfCnpjInput = document.getElementById('cpf_cnpj');
+      cpfCnpjInput.addEventListener('input', function(event) {
+        let value = event.target.value;
+        value = value.replace(/\D/g, '');
+        if (value.length > 11) {
+          value = value.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/, '$1.$2.$3/$4-$5');
+        } else {
+          value = value.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})$/, '$1.$2.$3-$4');
+        }
+        event.target.value = value;
+      });
+    });
+    $(document).ready(function() {
+      // Selecionar todos os campos de entrada e textarea dentro da classe .form-group
+      const formInputs = $(".form-group input, .form-group textarea");
+
+      // Adicionar um ouvinte de evento para o evento "focus" nos campos de entrada e textarea
+      formInputs.on("focus", function() {
+        // Encontrar o label associado a este campo de entrada ou textarea
+        const label = $(this).closest(".form-group").find("label");
+
+        // Adicionar a classe "label-animation--focus" ao label encontrado
+        label.addClass("label-animation--focus");
+
+        // Verificar se o elemento clicado é um input ou textarea e adicionar o estilo apropriado ao label
+        if ($(this).is("input")) {
+          label.css("top", "37%");
+        } else if ($(this).is("textarea")) {
+          label.css("top", "8%");
+        }
+      });
+
+      // Adicionar um ouvinte de evento para o evento "blur" nos campos de entrada e textarea
+      formInputs.on("blur", function() {
+        // Encontrar o label associado a este campo de entrada ou textarea
+        const label = $(this).closest(".form-group").find("label");
+
+        // Remover a classe "label-animation--focus" do label encontrado
+        label.removeClass("label-animation--focus");
+
+        // Remover o estilo de top adicionado ao label
+        label.css("top", "");
+      });
+    });
+
+    $(document).ready(function() {
+      // Selecionar todas as tags <a> com a classe .fornecedores
+      const fornecedoresLinks = $(".fornecedores");
+
+      // Adicionar um ouvinte de evento para o evento "mouseenter" (hover) nas tags <a>
+      fornecedoresLinks.on("mouseenter", function() {
+        // Encontrar a tag <span> dentro desta tag <a>
+        const spanTag = $(this).find("span");
+
+        // Remover a classe hidden da tag <span> e adicionar a classe flex
+        spanTag.removeClass("hidden").addClass("flex");
+      });
+
+      // Adicionar um ouvinte de evento para o evento "mouseleave" (quando o mouse sai do hover) nas tags <a>
+      fornecedoresLinks.on("mouseleave", function() {
+        // Encontrar a tag <span> dentro desta tag <a>
+        const spanTag = $(this).find("span");
+
+        // Remover a classe flex e adicionar a classe hidden na tag <span>
+        spanTag.removeClass("flex").addClass("hidden");
+      });
+    });
   </script>
 
 <?php

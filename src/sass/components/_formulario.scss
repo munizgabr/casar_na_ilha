@@ -1,0 +1,72 @@
+.formulario-contato {
+    h2 {
+        text-align: center;
+        text-decoration: none;
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    span input[type="text"],
+    span input[type="email"],
+    span textarea {
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        border: 2px solid;
+        border-color: #64CCC5;
+        background-color: #46494991;
+        transition: all .3s ease-in-out; 
+    }
+    .form-group {
+        position: relative;
+    }
+    .label-animation {
+        color: rgba(255,255,255, 0.2);
+        position: absolute;
+        top: 70%;
+        transform: translateY(-50%);
+        z-index: 1;
+        left: 6px;;
+    }
+    .label-animation.text-area{
+        top: 50%;
+    }
+
+    //Input animado
+    span input[type="text"],
+    span input[type="email"],
+    span textarea{
+        &::placeholder{
+            opacity: 0;
+            color: rgba(255,255,255, 0.2);
+        }
+        &:hover{
+            border-color: darken($color: #64CCC5, $amount: 20%);
+            transition: all .3s ease-in-out;
+        }
+        &:focus{
+            border-color: darken($color: #64CCC5, $amount: 20%);
+            transition: all .3s ease-in-out;
+            &::placeholder{
+                opacity: 1;
+            }
+        }
+        &:not(:placeholder-shown){
+            border-color: darken($color: #64CCC5, $amount: 20%);
+            transition: all .3s ease-in-out;
+        }
+    }
+    .wpcf7-not-valid-tip{
+        position: absolute;
+        top: -25px;
+    }
+}
+
+.label-animation--focus {
+    color: white !important;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: #0e4153;
+    padding: 0 5px;
+    transition: .3s ease-in-out;
+}

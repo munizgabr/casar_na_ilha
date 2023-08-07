@@ -1,17 +1,18 @@
+<form class="form search-form" role="search" method="get" action="<?php echo home_url('/'); ?>">
+    <div class="search">
+        <input type="search" class="search__input search-field wp-block-search__input" placeholder="<?php echo esc_attr_x('Busque aqui...', 'placeholder') ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x('Search for:', 'label') ?>" />
 
-<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-    <label>
-        <span class="screen-reader-text"><?php echo _x( 'Search for:', 'label' ) ?></span>
-        <input type="search" class="search-field"
-            placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder' ) ?>"
-            value="<?php echo get_search_query() ?>" name="s"
-            title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
-    </label>
-    <!-- <input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" /> -->
-    <button class="cssbuttons-io-button search-submit" type="submit">
-        <div class="icon">
-            <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m15.97 17.031c-1.479 1.238-3.384 1.985-5.461 1.985-4.697 0-8.509-3.812-8.509-8.508s3.812-8.508 8.509-8.508c4.695 0 8.508 3.812 8.508 8.508 0 2.078-.747 3.984-1.985 5.461l4.749 4.75c.146.146.219.338.219.531 0 .587-.537.75-.75.75-.192 0-.384-.073-.531-.22zm-5.461-13.53c-3.868 0-7.007 3.14-7.007 7.007s3.139 7.007 7.007 7.007c3.866 0 7.007-3.14 7.007-7.007s-3.141-7.007-7.007-7.007z" fill-rule="nonzero"/></svg>
-        </div>
-    </button>
+        <!-- Adicionando campos ocultos para tipo de fornecedor e nome da empresa -->
+        <input type="hidden" name="post_type" value="fornecedor" />
+        <input type="hidden" name="tipo" value="<?php echo get_query_var('tipo'); ?>" />
+        <input type="hidden" name="empresa" value="" /> <!-- Deixe o valor vazio por enquanto -->
+
+        <button class="search__button cssbuttons-io-button search-submit" type="submit">
+            <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
+                <g>
+                    <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                </g>
+            </svg>
+        </button>
+    </div>
 </form>
- 

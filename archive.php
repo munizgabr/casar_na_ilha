@@ -43,7 +43,7 @@ $term_description = wp_strip_all_tags(term_description());
 
 <section class="center grid grid-cols-1 items-center mt-[80px] sm:mt-[90px]">
     <div class="py-4 items-center justify-center">
-        <h2 class="font-bold text-white text-center text-xl"><?php echo single_term_title('', false); ?></h2>
+        <h2 class="font-bold text-white text-center text-xl no-underline"><?php echo single_term_title('', false); ?></h2>
         <p class="text-white font-thin text-md"><?php echo $term_description;?></p>
     </div>
     <div class="py-4 overflow-hidden">
