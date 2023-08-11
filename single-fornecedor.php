@@ -24,7 +24,7 @@ get_header(); ?>
     $neighborhood = $local['neighborhood'];
     $location = $neighborhood . ', ' . $city;
     $capacity = get_field('capacity');
-    $services = get_field('services');
+    $services = wp_strip_all_tags(get_field('services'));
     $gallery = get_field('gallery');
     $contact = get_field('contact');
     $insta = $contact['instagram'];
