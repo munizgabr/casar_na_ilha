@@ -7,8 +7,8 @@
 6 silly lifecycle neuringtech@0.0.1~predev: no script for predev, continuing
 7 info lifecycle neuringtech@0.0.1~dev: neuringtech@0.0.1
 8 verbose lifecycle neuringtech@0.0.1~dev: unsafe-perm in lifecycle true
-9 verbose lifecycle neuringtech@0.0.1~dev: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/var/www/html/soma/parkerlp/wp-content/themes/parkerlp/node_modules/.bin:/home/thunder/bin:/home/thunder/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-10 verbose lifecycle neuringtech@0.0.1~dev: CWD: /var/www/html/soma/parkerlp/wp-content/themes/parkerlp
+9 verbose lifecycle neuringtech@0.0.1~dev: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/var/www/html/soma/casarnailhalp/wp-content/themes/casarnailhalp/node_modules/.bin:/home/thunder/bin:/home/thunder/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+10 verbose lifecycle neuringtech@0.0.1~dev: CWD: /var/www/html/soma/casarnailhalp/wp-content/themes/casarnailhalp
 11 silly lifecycle neuringtech@0.0.1~dev: Args: [ '-c', 'npm run development' ]
 12 silly lifecycle neuringtech@0.0.1~dev: Returned: code: 1  signal: null
 13 info lifecycle neuringtech@0.0.1~dev: Failed to exec dev script
@@ -23,7 +23,7 @@
 14 verbose stack     at maybeClose (internal/child_process.js:920:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:230:5)
 15 verbose pkgid neuringtech@0.0.1
-16 verbose cwd /var/www/html/soma/parkerlp/wp-content/themes/parkerlp
+16 verbose cwd /var/www/html/soma/casarnailhalp/wp-content/themes/casarnailhalp
 17 error Linux 4.10.0-38-generic
 18 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "dev"
 19 error node v6.14.1

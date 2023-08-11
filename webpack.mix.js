@@ -11,7 +11,7 @@ mix.postCss('src/css/style.css', 'build/css/tailwind.css', [
 .combine(['build/css/tailwind.css', 'build/css/sass.css'], 'build/css/global.css');
 
 mix.browserSync({
-    proxy: 'http://localhost/soma/parkerlp',
+    proxy: 'http://localhost/soma/casarnailhalp',
     files: [
         "./**/*.php",
     ],

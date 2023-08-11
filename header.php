@@ -33,7 +33,7 @@
 								<h1 class="h1-hide"><?php echo get_bloginfo('name'); ?></h1>
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/src/images/logo_casar_na_ilha.png" alt="Homepage">
 							<?php } else { ?>
-								<a href="<?php echo esc_url( home_url() ); ?>" title="Parker"><img src="<?php echo get_stylesheet_directory_uri(); ?>/src/images/logo_casar_na_ilha.png" alt="Home Casar na Ilha"></a>
+								<a href="<?php echo esc_url( home_url() ); ?>" title="casarnailha"><img src="<?php echo get_stylesheet_directory_uri(); ?>/src/images/logo_casar_na_ilha.png" alt="Home Casar na Ilha"></a>
 							<?php } ?>
 						</div
 						><div class="wrapper-menu">
