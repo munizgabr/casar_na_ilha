@@ -27,6 +27,9 @@
         transform: translateY(-50%);
         z-index: 1;
         left: 6px;;
+        &.comments {
+            top: 50%;
+        }
     }
     .label-animation.text-area{
         top: 50%;

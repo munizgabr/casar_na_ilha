@@ -1,57 +1,74 @@
-#comments{
-    width:630px;
-    float:left;
-    border-top:1px solid #bebebe;
+fieldset {
+    .label-animation {
+        top: 50%;
     }
- 
-#comments h3{
-    font-size:14px;
-    margin:20px 0;
+}
+.formulario-contato {
+    .form-group {
+        &.comment {
+
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                width: 100% !important;
+                padding: 5px !important;
+                border-radius: 5px !important;
+                border: 2px solid !important;
+                border-color: #64CCC5 !important;
+                background-color: #46494991 !important;
+                transition: all .3s ease-in-out !important;
+
+                &::placeholder {
+                    opacity: 0.7 !important; // Ajuste a opacidade conforme necessário
+                    color: rgba(255, 255, 255, 0.2) !important;
+                }
+
+                &:hover,
+                &:focus,
+                &:not(:placeholder-shown) {
+                    border-color: darken($color: #64CCC5, $amount: 20%) !important;
+                    transition: all .3s ease-in-out !important;
+
+                    &::placeholder {
+                        opacity: 1 !important;
+                    }
+                }
+            }
+        }
     }
- 
-ol.commentlist{
-    list-style:none;
+
+}
+
+.commentlist {
+    .comment {
+        .comment-body {
+            p {
+                color: #176B87;
+                justify-content: start;
+                border: 1px solid #176B87;
+                padding: 10px;
+            }
+            .reply {
+                margin: 10px 0;
+                a {
+                    color: #176B87;
+                    border: 2px solid #176B87;
+                    padding: 5px 15px;
+                    font-weight: bold;
+                    &:hover {
+                        color: white;
+                        background-color: #176B87;
+                        transition: .3s all ease-in-out;
+                    }
+                }
+            }       
+        }
     }
- 
-ol.commentlist li{
-    margin-bottom:30px;
+}
+.comment-meta {
+    &.commentmetadata {
+        a {
+            color: #176B87;
+        }
     }
- 
-ol.commentlist ul{
-    margin:0px;
-    }
- 
-ol.commentlist ul li{
-    margin:20px 20px 20px 40px;
-    }
- 
-#respond{
-    margin:0 0 30px 0;
-    clear:both;
-    }
- 
-#respond form label{
-    float:left;
-    clear:left;
-    width:60px;
-    text-align:right;
-    margin-right:10px;
-    }
- 
-#respond form input{
-    float:left;
-    width:250px;
-    margin-bottom:10px;
-    }
- 
-#respond form textarea{
-    float:left;
-    width:400px;
-    height:100px;
-    margin-bottom:10px;
-    }
- 
-#respond form input.commentsubmit{
-    float:left;
-    margin-left:70px;
-    }
+}
