@@ -25,3 +25,17 @@ require(get_template_directory() . '/functions/widgets.php' );
 require(get_template_directory() . '/functions/widgets-categoria-fornecedor.php' );
 
 add_filter( 'use_widgets_block_editor', '__return_false' );
+
+// Criar página de opções
+if( function_exists( 'acf_add_options_page' ) ) {
+  acf_add_options_page([
+    'menu_title' => 'Configurações do Tema',
+    'page_title' => 'Configurações do Tema',
+    'position' => '4',
+    'menu_slug' => 'pagina_opcoes',
+    // 'parent_slug' => 'options-general.php',
+    'update_button' => 'Atualizar',
+    'updated_message' => 'Alterações feitas com sucesso.',
+    'icon_url' => 'dashicons-welcome-widgets-menus'
+  ]);
+}
