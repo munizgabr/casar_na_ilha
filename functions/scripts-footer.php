@@ -49,9 +49,9 @@ function neuringtech_activate_scripts()
       slidesPerView: 1,
       autoplay: {
         delay: 5000,
-        disableOnInteraction: false,
+        disableOnInteraction: true,
       },
-      paginationClickable: false,
+      paginationClickable: true,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -65,9 +65,9 @@ function neuringtech_activate_scripts()
       spaceBetween: 25,
       autoplay: {
         delay: 5000,
-        disableOnInteraction: false,
+        disableOnInteraction: true,
       },
-      paginationClickable: false,
+      paginationClickable: true,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -98,9 +98,14 @@ function neuringtech_activate_scripts()
       spaceBetween: 16,
       centeredSlides: true,
       loop: true,
+      paginationClickable: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next-main',
+        prevEl: '.swiper-button-prev-main',
       },
     });
     var gallery_swiper = new Swiper(".swiper-img", {
@@ -120,6 +125,15 @@ function neuringtech_activate_scripts()
       autoplay: {
         delay: 5000,
         disableOnInteraction: false,
+      },
+      paginationClickable: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next-highlights',
+        prevEl: '.swiper-button-prev-highlights',
       },
       breakpoints: {
         680: {

@@ -1,6 +1,6 @@
 <section class="py-4 center">
   <span class="uppercase text-lg text-center text-white my-4 font-bold block">Últimas notícias</span>
-  <div class=" w-full mx-0 p-4 grid grid-cols-3 grid-rows-3 gap-3 bg-[#ffffff66] rounded-md items-center justify-center text-center">
+  <div class=" w-full mx-0 p-4 grid grid-cols-3 grid-rows-2 md:grid-rows-3 gap-3 bg-[#ffffff66] rounded-md items-center justify-center text-center">
     <?php
     $recent_posts = get_posts(array(
       'post_type' => 'post',
@@ -35,7 +35,7 @@
         $post_title = get_the_title($post);
         $post_content = wp_trim_words(get_the_content($post), 10, '...');
     ?>
-        <a href="<?php echo get_permalink($post); ?>" class="secundario h-full rounded-md overflow-hidden font-semibold text-black text-lg relative" title="<?php the_title();?>">
+        <a href="<?php echo get_permalink($post); ?>" class="hidden md:block secundario h-full rounded-md overflow-hidden font-semibold text-black text-lg relative" title="<?php the_title();?>">
           <img class="w-full h-full object-cover" src="<?php echo (!empty($post_thumbnail)) ? $post_thumbnail : bloginfo('template_url') . '/src/images/ensaio.jpg'; ?>" alt="<?php echo $post_title; ?>">
           <div class="absolute bottom-0 w-full bg-[#ffffff66]">
             <span class="font-bold text-lg text-black uppercase"><?php echo $post_title; ?></span>
