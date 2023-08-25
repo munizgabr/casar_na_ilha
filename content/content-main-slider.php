@@ -15,25 +15,34 @@
       $textBanner = $banner['textBanner'];
       $imageWithText = $banner['imageWithText'];
       $descriptionBanner = $banner['descriptionBanner'];
+
+      // Escolha da imagem com base no dispositivo
+      if (wp_is_mobile()) {
+        $image = !empty($descriptionBanner['imagem_mobile']) ? $descriptionBanner['imagem_mobile'] : get_template_directory_uri() . '/src/images/wedding.jpg';
+        $txtImg = !empty($imageWithText['mobile']) ? $imageWithText['mobile'] : '';
+      } else {
+        $image = !empty($descriptionBanner['imagem_desktop']) ? $descriptionBanner['imagem_desktop'] : get_template_directory_uri() . '/src/images/wedding.jpg';
+        $txtImg = !empty($imageWithText['desktop']) ? $imageWithText['desktop'] : '';
+      }
+
       if (in_array('Banner principal', $adsType)) :
-        if($textBanner === true) {?>
-          <div class="swiper-slide h-[55vh] sm:h-[70vh]" style="background-image: url(<?php echo !empty($descriptionBanner['imagem']) ? $descriptionBanner['imagem'] : get_template_directory_uri() . '/src/images/wedding.jpg' ?>);background-size:100%;">
-          <div class="center grid grid-cols-1 sm:grid-cols-2 h-full items-center text-md">
-            <div class="description font-bold text-white text-center">
-              <?php echo !empty($descriptionBanner['content']) ? $descriptionBanner['content'] : ''; ?>
+        if ($textBanner === true) { ?>
+          <div class="swiper-slide h-[55vh] sm:h-[70vh]">
+            <div class="h-[55vh] sm:h-[70vh] bg-cover bg-no-repeat" style="background-image: url(<?php echo esc_url($image); ?>);">
+              <div class="center grid grid-cols-1 sm:grid-cols-2 h-full items-center text-md">
+                <div class="description font-bold text-white text-center">
+                  <?php echo !empty($descriptionBanner['content']) ? $descriptionBanner['content'] : ''; ?>
+                </div>
+                <a class="btn font-bold" href="<?php the_permalink(); ?>" title="Saiba mais sobre <?php the_title(); ?>">Saiba mais!</a>
+              </div>
             </div>
-            <a class="btn font-bold" href="<?php the_permalink(); ?>" title="Saiba mais sobre <?php the_title(); ?>">Saiba mais!</a>
           </div>
-        </div>
-       <? } else {?>
-        <div class="swiper-slide h-[55vh] sm:h-[70vh]" style="background-image: url(<?php echo !empty($imageWithText) ? $imageWithText : get_template_directory_uri() . '/src/images/wedding.jpg' ?>);background-size:100%;">
-          <div class="center grid grid-cols-1 sm:grid-cols-2 h-full items-center text-md">
-            <div class="description font-bold text-white text-center">
-              
-            </div>
-            <a class="btn font-bold" href="<?php the_permalink(); ?>" title="Saiba mais sobre <?php the_title(); ?>">Saiba mais!</a>
+        <?php } else { ?>
+          <div class="swiper-slide">
+            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="w-full h-full">
+              <img src="<?php echo $txtImg; ?>" alt="<?php the_title(); ?>">
+            </a>
           </div>
-        </div>
     <?php };
       endif;
     endforeach;

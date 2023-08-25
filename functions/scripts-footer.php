@@ -44,20 +44,6 @@ function neuringtech_enqueue_scripts_input()
 function neuringtech_activate_scripts()
 { ?>
   <script>
-    const swiper_archive = new Swiper('.archive-slider', {
-      loop: true,
-      slidesPerView: 1,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: true,
-      },
-      paginationClickable: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-
     //   // SWIPER CATEGORY
     const swiper_category = new Swiper('.swiper-category', {
       loop: true,
@@ -108,14 +94,19 @@ function neuringtech_activate_scripts()
         prevEl: '.swiper-button-prev-main',
       },
     });
+
     var gallery_swiper = new Swiper(".swiper-img", {
       slidesPerView: '1',
       spaceBetween: 16,
       centeredSlides: true,
       loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next-img',
+        prevEl: '.swiper-button-prev-img',
       },
     });
 
