@@ -28,10 +28,10 @@ function neuringtech_enqueue_scripts_input()
   wp_enqueue_style('caveat', 'https://fonts.googleapis.com/css2?family=Caveat&display=swap', array(), neuringtech_VERSION);
 
   // SWIPER JS
-  wp_enqueue_script('jsswiper', 'https://unpkg.com/swiper@8/swiper-bundle.min.js', array(), neuringtech_VERSION);
+  wp_enqueue_script('jsswiper', 'https://unpkg.com/swiper@10/swiper-bundle.min.js', array(), neuringtech_VERSION);
 
   // SWIPPER CSS
-  wp_enqueue_style('swiper', 'https://unpkg.com/swiper@8/swiper-bundle.min.css', array(), neuringtech_VERSION);
+  wp_enqueue_style('swiper', 'https://unpkg.com/swiper@10/swiper-bundle.min.css', array(), neuringtech_VERSION);
 
 
   $translation_array = array(
@@ -84,6 +84,10 @@ function neuringtech_activate_scripts()
       spaceBetween: 16,
       centeredSlides: true,
       loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+      },
       paginationClickable: true,
       pagination: {
         el: '.swiper-pagination',
@@ -139,60 +143,59 @@ function neuringtech_activate_scripts()
       },
     });
 
-    var purecookieTitle = "Cookies.",
-      purecookieDesc = "Os cookies nos ajudam a oferecer nossos serviços e alguns cookies são necessários para o funcionamento do site. Ao usar nossos serviços, você concorda com o uso de cookies",
-      purecookieLink = '<a href="https://www.casarnailha.com/politicas-de-privacidade/" target="_blank">Politicas de privacidade</a>',
-      purecookieButton = "aceitar";
-
-    function pureFadeIn(e, o) {
-      var i = document.getElementById(e);
-      i.style.opacity = 0, i.style.display = o || "block",
-        function e() {
-          var o = parseFloat(i.style.opacity);
-          (o += .02) > 1 || (i.style.opacity = o, requestAnimationFrame(e))
-        }()
-    }
-
-    function pureFadeOut(e) {
-      var o = document.getElementById(e);
-      o.style.opacity = 1,
-        function e() {
-          (o.style.opacity -= .02) < 0 ? o.style.display = "none" : requestAnimationFrame(e)
-        }()
-    }
-
-    function setCookie(e, o, i) {
-      var t = "";
-      if (i) {
-        var n = new Date;
-        n.setTime(n.getTime() + 24 * i * 60 * 60 * 1e3), t = "; expires=" + n.toUTCString()
+    //cookies
+    jQuery(document).ready(function($) {
+      // Função para gerar um ID de sessão aleatório
+      function generateSessionID() {
+        const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        let sessionID = '';
+        for (let i = 0; i < 10; i++) {
+          const randomIndex = Math.floor(Math.random() * characters.length);
+          sessionID += characters.charAt(randomIndex);
+        }
+        return sessionID;
       }
-      document.cookie = e + "=" + (o || "") + t + "; path=/"
-    }
 
-    function getCookie(e) {
-      for (var o = e + "=", i = document.cookie.split(";"), t = 0; t < i.length; t++) {
-        for (var n = i[t];
-          " " == n.charAt(0);) n = n.substring(1, n.length);
-        if (0 == n.indexOf(o)) return n.substring(o.length, n.length)
+      // Função para verificar e obter o ID da sessão do Local Storage
+      function getSessionID() {
+        let sessionID = localStorage.getItem('sessionID');
+        if (!sessionID) {
+          sessionID = generateSessionID();
+          localStorage.setItem('sessionID', sessionID);
+        }
+        return sessionID;
       }
-      return null
-    }
 
-    function eraseCookie(e) {
-      document.cookie = e + "=; Max-Age=-99999999;"
-    }
+      let sessionID = getSessionID(); // Obtém ou gera o ID da sessão
 
-    function cookieConsent() {
-      getCookie("purecookieDismiss") || (document.body.innerHTML += '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><a>' + purecookieTitle + '</a></div><div class="cookieDesc"><p>' + purecookieDesc + " " + purecookieLink + '</p></div><div class="cookieButton"><a onClick="purecookieDismiss();">' + purecookieButton + "</a></div></div>", pureFadeIn("cookieConsentContainer"))
-    }
+      let cookieHtml = '<div class="lgpd shadow-[0_3px_10px_rgb(0,0,0,0.2)] fixed left-5 right-5 bottom-5 p-5 flex justify-between items-center bg-[#0d303c] z-50"><span class="text-white">Nosso site utiliza cookies para melhorar a experiência do usuário. Acesse nossa página de <a class="font-bold hover:underline" href="https://www.casarnailha.com/política-de-privacidade">política de privacidade</a> para saber mais!</span><button class="cookie-btn px-5 py-3 text-[#176B87] font-bold bg-white hover:text-white hover:bg-[#176B87]">Aceitar</button></div>';
 
-    function purecookieDismiss() {
-      setCookie("purecookieDismiss", "1", 7), pureFadeOut("cookieConsentContainer")
-    }
-    window.onload = function() {
-      cookieConsent()
-    };
+      let lsContent = localStorage.getItem('cookie-lgpd');
+      if (!lsContent) {
+        $('body').append(cookieHtml);
+
+        $('.cookie-btn').on('click', async function() {
+          let cookieArea = $(this).closest('.lgpd');
+          cookieArea.remove();
+
+          // Enviar uma requisição POST para o endpoint do WordPress
+          let requestData = {
+            session_id: sessionID // Usar o valor da sessão gerado/acessado
+          };
+
+          try {
+            let response = await $.post('/wp-json/custom/v1/set-cookie', requestData);
+            if (response && response.message === 'Cookie acceptance stored') {
+              let postId = response.post_id; // Capturar o ID do post criado
+              localStorage.setItem('cookie-lgpd', postId); // Armazenar o ID no localStorage
+            }
+          } catch (error) {
+            console.error('Erro ao enviar a requisição:', error);
+          }
+        });
+      }
+    });
+
 
     //mascara para cpf e cnpj
     document.addEventListener('DOMContentLoaded', function() {
@@ -209,39 +212,39 @@ function neuringtech_activate_scripts()
       });
     });
     $(document).ready(function() {
-  // Selecionar todos os campos de entrada e textarea dentro da classe .form-group
-  const formInputs = $(".form-group input, .form-group textarea");
+      // Selecionar todos os campos de entrada e textarea dentro da classe .form-group
+      const formInputs = $(".form-group input, .form-group textarea");
 
-  // Adicionar um ouvinte de evento para o evento "focus" nos campos de entrada e textarea
-  formInputs.on("focus", function() {
-    // Encontrar o label associado a este campo de entrada ou textarea
-    const label = $(this).closest(".form-group").find("label");
+      // Adicionar um ouvinte de evento para o evento "focus" nos campos de entrada e textarea
+      formInputs.on("focus", function() {
+        // Encontrar o label associado a este campo de entrada ou textarea
+        const label = $(this).closest(".form-group").find("label");
 
-    // Verificar se o label tem as classes "label-animation" e "comments"
-    if (label.hasClass("label-animation") && label.hasClass("comments")) {
-      label.css("top", "0");
-    } else if ($(this).is("input")) {
-      label.css("top", "37%");
-    } else if ($(this).is("textarea")) {
-      label.css("top", "8%");
-    }
+        // Verificar se o label tem as classes "label-animation" e "comments"
+        if (label.hasClass("label-animation") && label.hasClass("comments")) {
+          label.css("top", "0");
+        } else if ($(this).is("input")) {
+          label.css("top", "37%");
+        } else if ($(this).is("textarea")) {
+          label.css("top", "8%");
+        }
 
-    // Adicionar a classe "label-animation--focus" ao label encontrado
-    label.addClass("label-animation--focus");
-  });
+        // Adicionar a classe "label-animation--focus" ao label encontrado
+        label.addClass("label-animation--focus");
+      });
 
-  // Adicionar um ouvinte de evento para o evento "blur" nos campos de entrada e textarea
-  formInputs.on("blur", function() {
-    // Encontrar o label associado a este campo de entrada ou textarea
-    const label = $(this).closest(".form-group").find("label");
+      // Adicionar um ouvinte de evento para o evento "blur" nos campos de entrada e textarea
+      formInputs.on("blur", function() {
+        // Encontrar o label associado a este campo de entrada ou textarea
+        const label = $(this).closest(".form-group").find("label");
 
-    // Remover a classe "label-animation--focus" do label encontrado
-    label.removeClass("label-animation--focus");
+        // Remover a classe "label-animation--focus" do label encontrado
+        label.removeClass("label-animation--focus");
 
-    // Remover o estilo de top adicionado ao label
-    label.css("top", "");
-  });
-});
+        // Remover o estilo de top adicionado ao label
+        label.css("top", "");
+      });
+    });
 
 
     $(document).ready(function() {

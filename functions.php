@@ -19,6 +19,10 @@ require(get_template_directory() . '/functions/pagination.php' );
 
 //Custom Posts
 require(get_template_directory() . '/functions/customPosts/fornecedores.php' );
+require(get_template_directory() . '/functions/customPosts/cookie_acceptance.php' );
+
+//Endpoints
+require(get_template_directory() . '/functions/endpoint/cookieAccept.php' );
 
 // Widgets
 require(get_template_directory() . '/functions/widgets.php' );
