@@ -1,25 +1,44 @@
-$(document).ready(function(){
-	$('.rmm .menu li.menu-item-has-children').click(function() {
-        $(this).toggleClass('active').siblings().removeClass('active');
-    });
-	$("body").on("click", '.nav-item', function(e) {
-		$('.nav-item').toggleClass("open");
-		$('.rmm').toggleClass("open");
-		if($(".rmm").hasClass("open")){
-			$(".tap-mobile").addClass("open");
-			$('section').css('z-index', '-1');
-			$('section>div').css('z-index', '-1');
-		} else {
-			$(".tap-mobile").removeClass("open");
-		}
-	});
+$(document).ready(function() {
 
-	$("body").on("click", ".rmm .menu li a", function(e){
-		$('.nav-item, .rmm, .tap-mobile').removeClass("open");
-	});
+    if ($(window).width() > 1185) {
 
-	$("body").on("click", ".tap-mobile", function(){
-		$(".rmm, .nav-item, .tap-mobile").removeClass("open");
-	});
+        $(".menu li .sub-menu li .icon-submenu").on("click", function(e) {
+            e.preventDefault();
+            $(this).siblings().next(".sub-menu").toggleClass("sub-menu-show");
+            $(this).toggleClass("active");
+        });
+
+
+
+        $(".menu-item-has-children").prepend("<span class='icon-submenu'></span>");
+        $(".menu-item-type-custom > .icon-submenu").click(false);
+
+    };
+
+    $('.nav-item').append("<div class='tap-mobile'></div>");
+
+    if ($(window).width() < 1185) {
+
+        var a = !1;
+        $("body").on("click", '.nav-item', function(e) {
+            $('.nav-item').toggleClass("open");
+			$('.tap-mobile').toggleClass("open");
+            0 == a ? ($("header .rmm").css({
+                left: "0",
+                opacity: "1"
+            }), a = !0) : ($("header .rmm").css({
+                opacity: "2px",
+                left: "-100%"
+            }), a = !1), e.preventDefault()
+        });
+
+        $(".menu-item-has-children").prepend("<span class='icon-submenu'></span>");
+        $(".menu-item-type-custom > .icon-submenu").click();
+        $(".icon-submenu").on("click", function(e) {
+            e.preventDefault();
+            $(this).siblings().next(".sub-menu").toggleClass("sub-menu-show-mobile");
+            $(this).toggleClass("active");
+        });
+    }
 
 });
